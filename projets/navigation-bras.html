@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Naviguer avec les bras — Arnaud Carbonnel</title>
+  <meta name="description" content="Explorer trois façons de se déplacer dans un environnement virtuel avec les gestes des bras et des mains.">
+  <!-- Une seule feuille de style est partagée par toutes les pages. -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" id="haut">
+    <a class="signature" href="../index.html" aria-label="Arnaud Carbonnel, accueil">
+      <span class="monogramme" aria-hidden="true">ac.</span>
+      <span>ARNAUD<br>CARBONNEL</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="../creations.html" class="is-current">Créations</a>
+      <a href="../gestion-projet.html">Gestion de projet</a>
+      <a href="../recherche.html">Recherche</a>
+      <a href="../explorations.html">Explorations</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="contenu">
+    <article class="section-width case-study">
+      <!-- ../ remonte du dossier projets vers la racine du site. -->
+      <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a><span aria-hidden="true">/</span><a href="../creations.html">Créations numériques</a><span aria-hidden="true">/</span><span aria-current="page">Naviguer avec les bras</span></nav>
+      <header class="page-heading case-heading">
+        <p class="eyebrow">Interaction gestuelle · Python &amp; Unity</p>
+        <h1>Naviguer avec les bras</h1>
+        <p class="lead">Explorer trois façons de se déplacer dans un environnement virtuel avec les gestes des bras et des mains.</p>
+      </header>
+      <!-- dl associe chaque information (dt) à sa valeur (dd). -->
+      <dl class="project-facts">
+        <div><dt>Cadre</dt><dd>Projet Junior · 2024–2025</dd></div><div><dt>Outils</dt><dd>MediaPipe · OpenCV · Unity</dd></div><div><dt>Approche</dt><dd>Trois modes de navigation</dd></div>
+      </dl>
+      <figure class="case-figure motion-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/navigation-bras.webp" aria-label="Agrandir : Capture du geste à deux mains utilisé pour piloter la navigation.">
+          <img src="../assets/images/navigation-bras.webp" alt="Capture du geste à deux mains utilisé pour piloter la navigation." loading="lazy" width="835" height="1400">
+        </a>
+        <figcaption>Capture du mode 2-Hands Flying : les poignets servent de repères pour le déplacement.</figcaption>
+      </figure>
+      <div class="case-layout">
+        <aside class="case-outline">
+          <p class="eyebrow">DANS CE PROJET</p>
+          <nav aria-label="Sommaire du projet">
+            <a href="#contexte">01 — Faire du geste une commande</a>
+            <a href="#realisation">02 — Trois modes à comparer</a>
+            <a href="#contribution">03 — Reconnaissance et intégration</a>
+            <a href="#bilan">04 — Comparer pour améliorer</a>
+          </nav>
+        </aside>
+        <div class="case-content">
+          <!-- BLOC 1 : Faire du geste une commande. Le lien du sommaire reprend cet id. -->
+          <section id="contexte" aria-labelledby="titre-contexte">
+            <p class="eyebrow">01 / Faire du geste une commande</p>
+            <h2 id="titre-contexte">Faire du geste une commande</h2>
+            <p>Ce projet Junior de Master explore des modes de navigation fondés sur les mouvements des bras et des mains. L’idée est de transformer des gestes observés par une caméra en commandes de déplacement dans un environnement virtuel. Une telle interaction pose plusieurs questions : quel geste associer à l’avancée, comment distinguer la direction de la vitesse, et comment reconnaître suffisamment bien ces gestes pour que la navigation reste compréhensible ?</p>
+            <p>Trois modes ont été développés et comparés pour examiner ces différentes relations entre le corps et la commande. Le projet ne se limite donc pas à une seule démonstration : il propose plusieurs façons de naviguer, puis les confronte à un parcours de test. Cette comparaison permet de faire ressortir les points forts et les difficultés de chaque approche, aussi bien du point de vue de la reconnaissance que de la prise en main.</p>
+            
+          </section>
+          <!-- BLOC 2 : Trois modes à comparer. Le lien du sommaire reprend cet id. -->
+          <section id="realisation" aria-labelledby="titre-realisation">
+            <p class="eyebrow">02 / Trois modes à comparer</p>
+            <h2 id="titre-realisation">Trois modes à comparer</h2>
+            <p>Les trois modes reposent sur des gestes différents. 2-Hands Flying utilise la position relative des poignets pour piloter le déplacement. Grabbing the Air s’appuie sur une main fermée qui revient vers le corps, comme une traction, et sur la main ouverte pour orienter le mouvement. Hand Control Flying Speed utilise la position de l’index par rapport au haut du corps pour gérer la vitesse et la direction.</p>
+            <p>Pour chaque mode, les gestes doivent être traduits en règles : distances, angles, seuils et états de la main. Ces règles déterminent le passage d’une posture observée à une commande. L’enjeu est de différencier une intention de navigation d’un simple mouvement intermédiaire. Les captures permettent d’observer les postures retenues et les réponses attendues, avant de comparer leur comportement dans la scène de test.</p>
+            <ul class="case-list"><li><strong>2-Hands Flying :</strong> l’écartement et l’orientation des poignets contrôlent le déplacement.</li><li><strong>Grabbing the Air :</strong> une main fermée qui se rapproche du corps simule une traction ; la main ouverte sert à orienter le déplacement.</li><li><strong>Hand Control Flying Speed :</strong> la position de l’index par rapport au haut du corps sert à gérer la vitesse et la direction.</li></ul>
+            <figure class="case-figure landscape-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/navigation-traction.webp" aria-label="Agrandir : Main fermée détectée pour le mode de navigation par traction.">
+          <img src="../assets/images/navigation-traction.webp" alt="Main fermée détectée pour le mode de navigation par traction." loading="lazy" width="831" height="676">
+        </a>
+        <figcaption>Grabbing the Air : reconnaître une fermeture de main puis une traction.</figcaption>
+      </figure>
+          </section>
+          <!-- BLOC 3 : Reconnaissance et intégration. Le lien du sommaire reprend cet id. -->
+          <section id="contribution" aria-labelledby="titre-contribution">
+            <p class="eyebrow">03 / Reconnaissance et intégration</p>
+            <h2 id="titre-contribution">Reconnaissance et intégration</h2>
+            <p>Le prototype associe Python, MediaPipe pour la détection des articulations, OpenCV pour le traitement des images et NumPy pour les calculs de distances et d’angles. Les commandes calculées sont transmises à Unity par UDP, puis appliquées au déplacement dans l’environnement. Mon rapport documente la conception des règles de reconnaissance, les trois modes de navigation et leur intégration dans le parcours d’essai.</p>
+            <p>L’expérimentation décrite comprend une présentation des gestes, un parcours guidé, une exploration libre et un questionnaire. Ce déroulement permet de regarder à la fois le fonctionnement du système et la manière dont les interactions sont comprises. Les retours portent notamment sur la réactivité, la naturalité du mouvement, le réalisme et le confort. Le nombre de participants n’étant pas précisé dans le rapport, ces résultats sont présentés ici comme des observations exploratoires.</p>
+            <figure class="case-figure landscape-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/navigation-direction.webp" aria-label="Agrandir : Capture de la reconnaissance d’un geste de direction avec l’index.">
+          <img src="../assets/images/navigation-direction.webp" alt="Capture de la reconnaissance d’un geste de direction avec l’index." loading="lazy" width="928" height="700">
+        </a>
+        <figcaption>Hand Control : interpréter la position et l’orientation de la main.</figcaption>
+      </figure>
+          </section>
+          <!-- BLOC 4 : Comparer pour améliorer. Le lien du sommaire reprend cet id. -->
+          <section id="bilan" aria-labelledby="titre-bilan">
+            <p class="eyebrow">04 / Comparer pour améliorer</p>
+            <h2 id="titre-bilan">Comparer pour améliorer</h2>
+            <p>Les essais rapportés mettent en avant 2-Hands Flying, suivi de Hand Control. Grabbing the Air rencontre davantage de difficultés de reconnaissance et de prise en main. La comparaison montre que la possibilité technique de détecter un geste ne suffit pas à rendre l’interaction confortable : la relation entre ce geste et le déplacement doit également être claire pour la personne qui l’utilise.</p>
+            <p>Les principales pistes d’amélioration concernent le calibrage, la gestion de la vitesse et la robustesse de la détection. Un réglage adapté à la morphologie et à la position de l’utilisateur pourrait rendre les commandes plus régulières. Des repères visuels ou sonores aideraient aussi à comprendre les états reconnus par le système. Le projet fournit ainsi plusieurs bases de navigation et un premier retour sur leurs limites respectives.</p>
+            
+          </section>
+        </div>
+      </div>
+      <div class="case-return"><a class="button" href="../creations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
+    </article>
+  </main>
+  <footer class="section-width site-footer">
+    <p>© 2026 Arnaud Carbonnel</p>
+    <div><a href="../index.html">Accueil</a><a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestion de projet — Arnaud Carbonnel</title>
+  <meta name="description" content="Cadrer un besoin, travailler en équipe et accompagner une idée jusqu’à sa réalisation.">
+  <!-- Une seule feuille de style est partagée par toutes les pages. -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" id="haut">
+    <a class="signature" href="index.html" aria-label="Arnaud Carbonnel, accueil">
+      <span class="monogramme" aria-hidden="true">ac.</span>
+      <span>ARNAUD<br>CARBONNEL</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="creations.html">Créations</a>
+      <a href="gestion-projet.html" class="is-current" aria-current="page">Gestion de projet</a>
+      <a href="recherche.html">Recherche</a>
+      <a href="explorations.html">Explorations</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="contenu">
+    <div class="section-width">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Gestion de projet</span></nav>
+      <header class="page-heading"><p class="eyebrow">02 / DU BESOIN À LA RÉALISATION</p><h1>Gestion de projet</h1><p class="lead">Cadrer un besoin, travailler en équipe et accompagner une idée jusqu’à sa réalisation.</p></header>
+      <div class="collection-bar"><p>2 projets à découvrir</p><span>IMAGE / IDÉE / RÉALISATION</span></div>
+      <!-- Ajoute chaque nouvelle carte à l’intérieur de project-grid. -->
+      <div class="project-grid">
+      <!-- CARTE : un seul lien englobe l’image, le titre et la phrase. -->
+      <article class="project-card">
+        <a class="project-link" href="projets/verallia.html" aria-labelledby="carte-verallia">
+          <div class="project-image landscape-image">
+            <img src="assets/images/verallia.webp" alt="Machine de contrôle photographiée dans l’usine Verallia pour les contenus de la visite." loading="lazy" width="1600" height="1067">
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Vidéo 360° · Unity · Gestion de projet</p>
+            <h2 id="carte-verallia">Verallia — visite immersive</h2>
+            <p>Chef de projet : relation entreprise / équipe, cahier des charges, développement de l’application et suivi.</p>
+            <span class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </article>
+      <!-- CARTE : un seul lien englobe l’image, le titre et la phrase. -->
+      <article class="project-card">
+        <a class="project-link" href="projets/little-archeologist.html" aria-labelledby="carte-little-archeologist">
+          <div class="project-image poster-image">
+            <img src="assets/images/little-archeologist.webp" alt="Affiche de Little Archeologist et de son univers archéologique destiné aux enfants." loading="lazy" width="990" height="1400">
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Gestion de projet · Réalité augmentée</p>
+            <h2 id="carte-little-archeologist">Little Archeologist</h2>
+            <p>Gestion de projet, montage vidéo, aide au développement et design UI/UX au sein de l’équipe.</p>
+            <span class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </article>
+      </div>
+    </div>
+  </main>
+  <footer class="section-width site-footer">
+    <p>© 2026 Arnaud Carbonnel</p>
+    <div><a href="index.html">Accueil</a><a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a></div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Walking in Place — Arnaud Carbonnel</title>
+  <meta name="description" content="Transformer les mouvements des jambes filmés en déplacement dans une scène Unity.">
+  <!-- Une seule feuille de style est partagée par toutes les pages. -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" id="haut">
+    <a class="signature" href="../index.html" aria-label="Arnaud Carbonnel, accueil">
+      <span class="monogramme" aria-hidden="true">ac.</span>
+      <span>ARNAUD<br>CARBONNEL</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="../creations.html" class="is-current">Créations</a>
+      <a href="../gestion-projet.html">Gestion de projet</a>
+      <a href="../recherche.html">Recherche</a>
+      <a href="../explorations.html">Explorations</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="contenu">
+    <article class="section-width case-study">
+      <!-- ../ remonte du dossier projets vers la racine du site. -->
+      <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a><span aria-hidden="true">/</span><a href="../creations.html">Créations numériques</a><span aria-hidden="true">/</span><span aria-current="page">Walking in Place</span></nav>
+      <header class="page-heading case-heading">
+        <p class="eyebrow">Interaction · Python &amp; Unity</p>
+        <h1>Walking in Place</h1>
+        <p class="lead">Transformer les mouvements des jambes filmés en déplacement dans une scène Unity.</p>
+      </header>
+      <!-- dl associe chaque information (dt) à sa valeur (dd). -->
+      <dl class="project-facts">
+        <div><dt>Cadre</dt><dd>Master · 2024–2025</dd></div><div><dt>Outils</dt><dd>Python · MediaPipe · Unity</dd></div><div><dt>Format</dt><dd>Prototype de locomotion</dd></div>
+      </dl>
+      <figure class="case-figure motion-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/walking-in-place.webp" aria-label="Agrandir : Deux captures de suivi des articulations des jambes pendant la marche.">
+          <img src="../assets/images/walking-in-place.webp" alt="Deux captures de suivi des articulations des jambes pendant la marche." loading="lazy" width="655" height="481">
+        </a>
+        <figcaption>Suivi des mouvements des jambes dans la vidéo utilisée pour le prototype.</figcaption>
+      </figure>
+      <div class="case-layout">
+        <aside class="case-outline">
+          <p class="eyebrow">DANS CE PROJET</p>
+          <nav aria-label="Sommaire du projet">
+            <a href="#contexte">01 — Contexte et objectif</a>
+            <a href="#realisation">02 — Du mouvement à la scène 3D</a>
+            <a href="#contribution">03 — Développement du prototype</a>
+            <a href="#demonstration">04 — Voir le prototype</a>
+            <a href="#bilan">05 — Résultats et pistes de travail</a>
+          </nav>
+        </aside>
+        <div class="case-content">
+          <!-- BLOC 1 : Contexte et objectif. Le lien du sommaire reprend cet id. -->
+          <section id="contexte" aria-labelledby="titre-contexte">
+            <p class="eyebrow">01 / Contexte et objectif</p>
+            <h2 id="titre-contexte">Contexte et objectif</h2>
+            <p>Walking in Place explore une question simple : comment faire avancer une caméra dans un univers 3D à partir de mouvements de marche, sans utiliser les touches d’un clavier pour commander ce déplacement ? Réalisé dans le cadre du Master Management des technologies interactives 3D, le projet relie l’observation du corps à une action dans Unity. Il s’inscrit dans une réflexion sur les interactions gestuelles et sur la manière de rendre le déplacement virtuel plus proche d’un mouvement physique.</p>
+            <p>La version présentée utilise une vidéo de marche sur place. L’objectif du prototype est d’identifier les mouvements des jambes, d’en déduire une vitesse et de transmettre cette information à une caméra virtuelle. L’utilisation avec un casque VR et le changement de direction constituent des prolongements possibles ; la réalisation documentée se concentre sur cette première chaîne de traitement.</p>
+            
+          </section>
+          <!-- BLOC 2 : Du mouvement à la scène 3D. Le lien du sommaire reprend cet id. -->
+          <section id="realisation" aria-labelledby="titre-realisation">
+            <p class="eyebrow">02 / Du mouvement à la scène 3D</p>
+            <h2 id="titre-realisation">Du mouvement à la scène 3D</h2>
+            <p>Le traitement commence en Python par la lecture de la vidéo et la détection de la posture avec MediaPipe. Les genoux et les chevilles servent de repères : l’évolution de leur position permet d’identifier les mouvements associés aux pas. Le programme estime ensuite une cadence et une longueur de foulée pour produire une valeur de vitesse. Cette valeur reste une approximation destinée au pilotage du prototype, et non une mesure biomécanique calibrée.</p>
+            <p>La vitesse est envoyée à Unity par UDP, un mode de communication permettant aux deux programmes d’échanger des données. Un script C# reçoit cette valeur, la convertit et l’applique au déplacement de la caméra dans la scène. Le travail consiste donc autant à reconnaître le mouvement qu’à assurer une continuité entre la détection, le calcul et la réponse visuelle. Les schémas et captures du projet permettent de suivre chacune de ces étapes.</p>
+            <ol class="process-list"><li><strong>Observer</strong><span>Lire la vidéo et détecter les articulations.</span></li><li><strong>Interpréter</strong><span>Transformer les mouvements en une vitesse estimée.</span></li><li><strong>Transmettre</strong><span>Envoyer cette valeur à Unity par UDP.</span></li><li><strong>Déplacer</strong><span>Faire avancer la caméra dans la scène.</span></li></ol>
+            <figure class="case-figure landscape-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/wip-environnement.webp" aria-label="Agrandir : Vue de l’environnement Unity utilisé pour le déplacement de la caméra.">
+          <img src="../assets/images/wip-environnement.webp" alt="Vue de l’environnement Unity utilisé pour le déplacement de la caméra." loading="lazy" width="1600" height="911">
+        </a>
+        <figcaption>Environnement de démonstration utilisé pour tester la navigation. Le travail présenté porte sur le suivi du mouvement et son intégration.</figcaption>
+      </figure>
+          </section>
+          <!-- BLOC 3 : Développement du prototype. Le lien du sommaire reprend cet id. -->
+          <section id="contribution" aria-labelledby="titre-contribution">
+            <p class="eyebrow">03 / Développement du prototype</p>
+            <h2 id="titre-contribution">Développement du prototype</h2>
+            <p>Le développement présenté dans mon rapport couvre les différents maillons du prototype : le suivi des jambes en Python, le calcul d’une vitesse, son envoi par UDP et sa réception dans Unity. L’intégration de ces éléments permet de vérifier qu’un mouvement détecté dans la vidéo produit bien un déplacement dans la scène. Le décor sert ici de support à l’expérience : la contribution mise en avant est le lien entre l’analyse du mouvement et la navigation virtuelle.</p>
+            <p>Les essais ont également permis de prendre du recul sur les réglages. Une variation de détection peut se traduire par une accélération ou un déplacement brusque de la caméra. Observer le suivi et le résultat dans Unity aide à identifier l’origine de ces écarts et à distinguer les difficultés de capture de celles liées au déplacement. Les fichiers de code, les captures et la démonstration conservent les étapes de cette réalisation.</p>
+            
+          </section>
+          <!-- BLOC 4 : Voir le prototype. Le lien du sommaire reprend cet id. -->
+          <section id="demonstration" aria-labelledby="titre-demonstration">
+            <p class="eyebrow">04 / Voir le prototype</p>
+            <h2 id="titre-demonstration">Voir le prototype</h2>
+            <figure class="project-video">
+              <!-- controls affiche les commandes ; preload="none" évite de charger la vidéo à l’ouverture. -->
+              <video controls playsinline preload="none" poster="../assets/images/walking-in-place.webp" aria-label="Enregistrement du prototype Walking in Place." aria-describedby="description-walking-in-place">
+                <source src="../assets/videos/walking-in-place.mp4" type="video/mp4">
+                Votre navigateur ne peut pas lire cette vidéo. Utilisez le lien ci-dessous.
+              </video>
+              <figcaption>Enregistrement du prototype Walking in Place. <a href="../assets/videos/walking-in-place.mp4">Ouvrir la vidéo (19 Mo) ↗</a></figcaption>
+            </figure>
+            <p class="media-description" id="description-walking-in-place">Le principe : les mouvements des jambes détectés dans une vidéo alimentent le déplacement d’une caméra dans Unity.</p>
+          </section>
+          <!-- BLOC 5 : Résultats et pistes de travail. Le lien du sommaire reprend cet id. -->
+          <section id="bilan" aria-labelledby="titre-bilan">
+            <p class="eyebrow">05 / Résultats et pistes de travail</p>
+            <h2 id="titre-bilan">Résultats et pistes de travail</h2>
+            <p>Le prototype a permis d’établir une chaîne complète entre une marche filmée et le déplacement d’une caméra virtuelle. Le rapport décrit des essais auprès de cinq personnes, qui ont donné un premier retour sur la réactivité, la fluidité et le ressenti du mouvement. Ces observations montrent l’intérêt du principe tout en faisant ressortir les réglages encore nécessaires. Elles restent des retours exploratoires sur un prototype, avec un nombre limité de participants.</p>
+            <p>La principale piste d’amélioration concerne le lissage de la vitesse pour réduire les variations brusques. Un calibrage plus précis de la détection et un travail sur les retards permettraient aussi d’améliorer la continuité du mouvement. Le changement de direction, les retours sonores et une intégration dans un casque VR ouvrent ensuite des possibilités d’évolution. Ce projet constitue ainsi une première base pour explorer la navigation à partir du corps.</p>
+            <ul class="case-list"><li>Lisser les variations de vitesse pour limiter les mouvements brusques.</li><li>Mieux calibrer la détection et réduire les retards perceptibles.</li><li>Ajouter le changement de direction et explorer ensuite une utilisation avec un casque VR.</li></ul>
+          </section>
+        </div>
+      </div>
+      <div class="case-return"><a class="button" href="../creations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
+    </article>
+  </main>
+  <footer class="section-width site-footer">
+    <p>© 2026 Arnaud Carbonnel</p>
+    <div><a href="../index.html">Accueil</a><a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a></div>
+  </footer>
+</body>
+</html>

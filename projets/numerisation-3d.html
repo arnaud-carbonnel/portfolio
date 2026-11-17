@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Se numériser en 3D — Arnaud Carbonnel</title>
+  <meta name="description" content="Passer d’une vidéo au smartphone à un modèle 3D, et comprendre les limites de la capture.">
+  <!-- Une seule feuille de style est partagée par toutes les pages. -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" id="haut">
+    <a class="signature" href="../index.html" aria-label="Arnaud Carbonnel, accueil">
+      <span class="monogramme" aria-hidden="true">ac.</span>
+      <span>ARNAUD<br>CARBONNEL</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="../creations.html">Créations</a>
+      <a href="../gestion-projet.html">Gestion de projet</a>
+      <a href="../recherche.html">Recherche</a>
+      <a href="../explorations.html" class="is-current">Explorations</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="contenu">
+    <article class="section-width case-study">
+      <!-- ../ remonte du dossier projets vers la racine du site. -->
+      <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="../index.html">Accueil</a><span aria-hidden="true">/</span><a href="../explorations.html">Explorations</a><span aria-hidden="true">/</span><span aria-current="page">Se numériser en 3D</span></nav>
+      <header class="page-heading case-heading">
+        <p class="eyebrow">Exploration · Capture &amp; photogrammétrie</p>
+        <h1>Se numériser en 3D</h1>
+        <p class="lead">Passer d’une vidéo au smartphone à un modèle 3D, et comprendre les limites de la capture.</p>
+      </header>
+      <!-- dl associe chaque information (dt) à sa valeur (dd). -->
+      <dl class="project-facts">
+        <div><dt>Cadre</dt><dd>Master · 2024–2025</dd></div><div><dt>Outils</dt><dd>Smartphone · Polycam · Blender</dd></div><div><dt>Format</dt><dd>Expérimentation de numérisation</dd></div>
+      </dl>
+      <figure class="case-figure scan-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/numerisation-3d.webp" aria-label="Agrandir : Un des modèles 3D obtenus par capture vidéo du corps.">
+          <img src="../assets/images/numerisation-3d.webp" alt="Un des modèles 3D obtenus par capture vidéo du corps." loading="lazy" width="294" height="591">
+        </a>
+        <figcaption>Un essai de reconstruction 3D issu de la capture vidéo.</figcaption>
+      </figure>
+      <div class="case-layout">
+        <aside class="case-outline">
+          <p class="eyebrow">DANS CE PROJET</p>
+          <nav aria-label="Sommaire du projet">
+            <a href="#contexte">01 — Expérimenter la capture du corps</a>
+            <a href="#realisation">02 — De la prise de vue au modèle</a>
+            <a href="#bilan">03 — Ce que les essais montrent</a>
+          </nav>
+        </aside>
+        <div class="case-content">
+          <!-- BLOC 1 : Expérimenter la capture du corps. Le lien du sommaire reprend cet id. -->
+          <section id="contexte" aria-labelledby="titre-contexte">
+            <p class="eyebrow">01 / Expérimenter la capture du corps</p>
+            <h2 id="titre-contexte">Expérimenter la capture du corps</h2>
+            <p>Cette exploration réalisée dans le cadre du Master consiste à produire une représentation 3D de ma personne à partir d’une vidéo au smartphone. Elle permet de découvrir les étapes de la numérisation, depuis la préparation de la prise de vue jusqu’au modèle obtenu. L’objectif est aussi d’identifier les conditions qui favorisent une reconstruction lisible : éclairage, diversité des angles, stabilité du sujet et visibilité des différentes parties du corps.</p>
+            <p>Le projet présente plusieurs essais dont les résultats restent perfectibles. Leur intérêt est de montrer le processus de fabrication du modèle et les difficultés rencontrées, autant que le résultat visuel. Cette place accordée aux essais et aux limites explique son classement dans Explorations, où je rassemble des réalisations centrées sur l’apprentissage de nouvelles méthodes.</p>
+            
+          </section>
+          <!-- BLOC 2 : De la prise de vue au modèle. Le lien du sommaire reprend cet id. -->
+          <section id="realisation" aria-labelledby="titre-realisation">
+            <p class="eyebrow">02 / De la prise de vue au modèle</p>
+            <h2 id="titre-realisation">De la prise de vue au modèle</h2>
+            <p>La capture a été réalisée avec un Samsung Galaxy S21 5G, en tournant autour du corps et en variant les angles de la tête vers les pieds. La vidéo a ensuite été traitée avec Polycam pour obtenir une reconstruction, puis un modèle exporté au format GLTF. Le rapport décrit ce passage de la capture au maillage et les opérations de nettoyage avec Blender pour retirer les éléments extérieurs récupérés avec le corps.</p>
+            <p>Les images montrent les différences entre les essais. Certaines zones sont mieux restituées que d’autres, tandis que le sol ou des éléments de l’environnement peuvent rester attachés au sujet. Ces défauts rendent visible l’importance de la prise de vue : une zone insuffisamment observée ou un mouvement pendant la capture peut compliquer la reconstruction. Le nettoyage du modèle vient ensuite compléter le traitement automatique.</p>
+            <figure class="case-figure scan-image">
+        <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
+        <a href="../assets/images/numerisation-essai.webp" aria-label="Agrandir : Autre essai de numérisation, les bras écartés.">
+          <img src="../assets/images/numerisation-essai.webp" alt="Autre essai de numérisation, les bras écartés." loading="lazy" width="220" height="315">
+        </a>
+        <figcaption>Un autre essai permet de comparer les zones bien reconstruites et les défauts.</figcaption>
+      </figure>
+          </section>
+          <!-- BLOC 3 : Ce que les essais montrent. Le lien du sommaire reprend cet id. -->
+          <section id="bilan" aria-labelledby="titre-bilan">
+            <p class="eyebrow">03 / Ce que les essais montrent</p>
+            <h2 id="titre-bilan">Ce que les essais montrent</h2>
+            <p>Les modèles obtenus rendent le sujet reconnaissable, mais comportent encore des défauts de détail et des zones incomplètes. Le rapport conclut donc à un résultat partiel, utile pour découvrir la méthode et analyser ses contraintes. Cette expérimentation m’a permis de relier les conditions de capture à ce que l’on retrouve dans le modèle, puis de comprendre la place des retouches dans le passage vers un objet 3D exploitable.</p>
+            <p>Pour poursuivre ce travail, les améliorations porteraient d’abord sur une prise de vue plus régulière, un éclairage homogène et une meilleure couverture des zones difficiles. Le nettoyage des éléments parasites et la correction des parties peu lisibles constitueraient ensuite une deuxième étape. La fiche conserve plusieurs essais pour permettre cette comparaison et montrer ce que la numérisation apporte, avec ses limites actuelles.</p>
+            
+          </section>
+        </div>
+      </div>
+      <div class="case-return"><a class="button" href="../explorations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
+    </article>
+  </main>
+  <footer class="section-width site-footer">
+    <p>© 2026 Arnaud Carbonnel</p>
+    <div><a href="../index.html">Accueil</a><a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a></div>
+  </footer>
+</body>
+</html>

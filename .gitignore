@@ -1,0 +1,18 @@
+# Liste des types de fichiers prevus pour ce portfolio public.
+# Tout nouveau type de fichier doit etre examine avant d'etre autorise ici.
+# Ce fichier n'efface pas les fichiers deja suivis ni l'historique Git.
+# Il ne filtre pas un envoi manuel dans l'interface web de GitHub.
+*
+!/.gitignore
+!/*.html
+!/style.css
+!/projets/
+!/projets/*.html
+!/assets/
+!/assets/favicon.svg
+!/assets/images/
+!/assets/images/*.webp
+!/assets/videos/
+!/assets/videos/*.mp4
+!/assets/documents/
+!/assets/documents/article-cobot.pdf

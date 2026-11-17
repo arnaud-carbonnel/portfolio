@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mon portfolio web — Arnaud Carbonnel</title>
+  <meta name="description" content="Apprendre à construire un site en code pour partager mes créations et raconter mes projets.">
+  <!-- Toutes les pages partagent la même feuille de style. -->
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <!-- Le même menu est présent dans chaque fichier HTML. -->
+  <header class="site-header" id="haut">
+    <a class="signature" href="../index.html" aria-label="Arnaud Carbonnel, accueil">
+      <span class="monogramme" aria-hidden="true">ac.</span>
+      <span>ARNAUD<br>CARBONNEL</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="../creations.html">Créations</a>
+      <a href="../gestion-projet.html">Gestion de projet</a>
+      <a href="../recherche.html">Recherche</a>
+      <a href="../explorations.html" class="is-current">Explorations</a>
+      <a href="../a-propos.html">À propos</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="contenu">
+    <article class="section-width case-study">
+      <!-- ../ remonte du dossier projets vers le dossier principal du site. -->
+      <nav class="breadcrumb" aria-label="Fil d’Ariane">
+        <a href="../index.html">Accueil</a><span aria-hidden="true">/</span>
+        <a href="../explorations.html">Explorations</a><span aria-hidden="true">/</span>
+        <span aria-current="page">Mon portfolio web</span>
+      </nav>
+      <header class="page-heading case-heading">
+        <p class="eyebrow">HTML · CSS · Projet personnel</p>
+        <h1>Mon portfolio web</h1>
+        <p class="lead">Apprendre à construire un site en code pour partager mes créations et raconter mes projets.</p>
+      </header>
+      <dl class="project-facts">
+        <div><dt>Format</dt><dd>Site web personnel</dd></div>
+        <div><dt>Technologies</dt><dd>HTML et CSS</dd></div>
+        <div><dt>Statut</dt><dd>En cours de création</dd></div>
+      </dl>
+      <figure class="case-figure web-image">
+        <a href="../assets/images/portfolio-web.webp" aria-label="Agrandir le visuel : Mon portfolio web">
+          <img src="../assets/images/portfolio-web.webp" alt="Capture de la première page d’accueil du portfolio Arnaud Carbonnel." width="629" height="656">
+        </a>
+        <figcaption>Première version du site, avant son organisation en plusieurs pages. <a href="../assets/images/portfolio-web.webp">Agrandir le visuel ↗</a></figcaption>
+      </figure>
+      <div class="case-layout">
+        <aside class="case-outline">
+          <p class="eyebrow">DANS CE PROJET</p>
+          <nav aria-label="Sommaire du projet">
+            <a href="#contexte">01 — Contexte et objectif</a>
+            <a href="#realisation">02 — Réalisation</a>
+            <a href="#contribution">03 — Ma contribution</a>
+            <a href="#bilan">04 — Résultats et suite</a>
+          </nav>
+        </aside>
+        <div class="case-content">
+          <section id="contexte" aria-labelledby="titre-contexte">
+            <p class="eyebrow">01 / COMPRENDRE LE BESOIN</p>
+            <h2 id="titre-contexte">Contexte et objectif</h2>
+            <p>Ce portfolio accompagne ma recherche d’emploi et mon apprentissage du développement web. Je souhaitais renouveler mon ancien site avec une réalisation dont je puisse comprendre et modifier le code. L’objectif est de présenter mes créations, mes expériences de gestion de projet, mes contributions à la recherche et mes explorations dans un ensemble cohérent, tout en apprenant les bases de sa construction.</p>
+            <p>Le site est organisé en trois niveaux : une page d’accueil, des rubriques et une fiche détaillée par projet. Chaque carte donne un premier aperçu grâce à une image, un titre et une phrase, puis ouvre un récit plus complet. Cette structure permet d’ajouter progressivement des réalisations et de présenter davantage de contexte sans surcharger les pages de rubrique.</p>
+            
+          </section>
+          <section id="realisation" aria-labelledby="titre-realisation">
+            <p class="eyebrow">02 / PASSER À LA RÉALISATION</p>
+            <h2 id="titre-realisation">La réalisation</h2>
+            <p>Le site utilise des fichiers HTML pour le contenu et une feuille CSS commune pour la présentation. Les liens assurent la navigation entre les pages ; aucun framework n’est nécessaire pour cette version. Les fiches rassemblent des informations courtes, des sections de récit, des images et, lorsque cela apporte quelque chose, des vidéos. Une rubrique Recherche donne également accès à un article scientifique en PDF.</p>
+            <p>La présentation s’adapte à la largeur de l’écran : les cartes passent de plusieurs colonnes à une seule sur mobile, le menu peut revenir à la ligne et le contenu des fiches se réorganise. Les images ont été préparées dans un format plus léger, et les vidéos démarrent à la demande. Ces choix permettent de travailler à la fois sur la structure, la lisibilité et l’accès aux contenus.</p>
+            
+          </section>
+          <section id="contribution" aria-labelledby="titre-contribution">
+            <p class="eyebrow">03 / MA PLACE DANS LE PROJET</p>
+            <h2 id="titre-contribution">Ma contribution</h2>
+            <p>Je construis ce portfolio avec l’accompagnement de Codex, dans une démarche d’apprentissage. Je définis les rubriques, sélectionne les projets, apporte les documents et précise mes contributions. Je participe aussi aux choix de présentation et aux corrections des textes. Le code est préparé et commenté avec cette aide pour que je puisse le relire, le comprendre et le modifier progressivement.</p>
+            <p>Le travail se fait par étapes : commencer par une page, organiser plusieurs rubriques, ajouter les fiches puis enrichir leur contenu à partir de mes rapports et de mes médias. Un guide explique la structure des fichiers et propose des exercices ciblés, comme modifier une phrase ou ajouter une carte. Cette démarche rend visibles à la fois le résultat du site et le chemin d’apprentissage qui l’accompagne.</p>
+            
+          </section>
+          <section id="bilan" aria-labelledby="titre-bilan">
+            <p class="eyebrow">04 / PRENDRE DU RECUL</p>
+            <h2 id="titre-bilan">Résultats et suite</h2>
+            <p>La version actuelle rassemble quatre rubriques et neuf fiches, avec une navigation entre les cartes et les projets, des illustrations, des vidéos et un accès à la publication. Elle reste enregistrée localement pendant sa préparation. Les améliorations portent sur la qualité des récits, la sélection des médias et la vérification de la lecture sur différentes tailles d’écran.</p>
+            <p>La suite du projet consiste à relire le code bloc par bloc, compléter les informations encore manquantes et préparer l’hébergement. La mise en ligne permettra de partager une adresse avec des recruteurs et de consulter le site depuis un téléphone. L’apprentissage de Git et la gestion des mises à jour font également partie des prochaines étapes.</p>
+            
+          </section>
+        </div>
+      </div>
+      <div class="case-return">
+        <a class="button" href="../explorations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a>
+      </div>
+    </article>
+  </main>
+  <footer class="section-width site-footer">
+    <p>© 2026 Arnaud Carbonnel</p>
+    <div><a href="../index.html">Accueil</a><a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a></div>
+  </footer>
+</body>
+</html>

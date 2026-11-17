@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explorations — Arnaud Carbonnel</title>
+  <meta name="description" content="Des essais et des projets d’apprentissage, avec leurs étapes, leurs résultats et ce qu’ils m’apprennent.">
+  <!-- Une seule feuille de style est partagée par toutes les pages. -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+  <header class="site-header" id="haut">
+    <a class="signature" href="index.html" aria-label="Arnaud Carbonnel, accueil">
+      <span class="monogramme" aria-hidden="true">ac.</span>
+      <span>ARNAUD<br>CARBONNEL</span>
+    </a>
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="creations.html">Créations</a>
+      <a href="gestion-projet.html">Gestion de projet</a>
+      <a href="recherche.html">Recherche</a>
+      <a href="explorations.html" class="is-current" aria-current="page">Explorations</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main id="contenu">
+    <div class="section-width">
+      <nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="index.html">Accueil</a><span aria-hidden="true">/</span><span aria-current="page">Explorations</span></nav>
+      <header class="page-heading"><p class="eyebrow">04 / TESTER · APPRENDRE · CRÉER</p><h1>Explorations</h1><p class="lead">Des essais et des projets d’apprentissage, avec leurs étapes, leurs résultats et ce qu’ils m’apprennent.</p></header>
+      <div class="collection-bar"><p>2 projets à découvrir</p><span>IMAGE / IDÉE / RÉALISATION</span></div>
+      <!-- Ajoute chaque nouvelle carte à l’intérieur de project-grid. -->
+      <div class="project-grid">
+      <!-- CARTE : un seul lien englobe l’image, le titre et la phrase. -->
+      <article class="project-card">
+        <a class="project-link" href="projets/numerisation-3d.html" aria-labelledby="carte-numerisation-3d">
+          <div class="project-image scan-image">
+            <img src="assets/images/numerisation-3d.webp" alt="Un des modèles 3D obtenus par capture vidéo du corps." loading="lazy" width="294" height="591">
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">Exploration · Capture &amp; photogrammétrie</p>
+            <h2 id="carte-numerisation-3d">Se numériser en 3D</h2>
+            <p>Passer d’une vidéo au smartphone à un modèle 3D, et comprendre les limites de la capture.</p>
+            <span class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </article>
+      <!-- CARTE : un seul lien englobe l’image, le titre et la phrase. -->
+      <article class="project-card">
+        <a class="project-link" href="projets/portfolio-web.html" aria-labelledby="carte-portfolio-web">
+          <div class="project-image web-image">
+            <img src="assets/images/portfolio-web.webp" alt="Aperçu de la première version du portfolio." loading="lazy" width="629" height="656">
+          </div>
+          <div class="card-copy">
+            <p class="eyebrow">HTML · CSS · Apprentissage</p>
+            <h2 id="carte-portfolio-web">Mon portfolio web</h2>
+            <p>Concevoir et coder ce portfolio, en apprenant le HTML et le CSS étape par étape.</p>
+            <span class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></span>
+          </div>
+        </a>
+      </article>
+      </div>
+    </div>
+  </main>
+  <footer class="section-width site-footer">
+    <p>© 2026 Arnaud Carbonnel</p>
+    <div><a href="index.html">Accueil</a><a href="#haut">Retour en haut <span aria-hidden="true">↑</span></a></div>
+  </footer>
+</body>
+</html>
