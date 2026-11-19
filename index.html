@@ -6,7 +6,9 @@
   <title>Création numérique &amp; gestion de projet — Arnaud Carbonnel</title>
   <meta name="description" content="Le portfolio d’Arnaud Carbonnel : créations numériques, projets collectifs et explorations personnelles.">
   <!-- Toutes les pages partagent la même feuille de style. -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20261119-selection">
+  <!-- defer attend que le HTML soit lu avant de brancher les interactions. -->
+  <script src="interactions.js?v=20261119-selection" defer></script>
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -39,16 +41,37 @@
           <a class="text-link" href="a-propos.html">Mon parcours <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-      <!-- Un vrai visuel de projet : toute la composition mène à sa fiche. -->
+      <!-- Trois cartes empilées : le sélecteur au-dessus fait passer le projet choisi devant. -->
       <div class="hero-visual">
-        <a class="hero-project" href="projets/beg-ar-loued.html" aria-labelledby="apercu-projet">
-          <img src="assets/images/beg-ar-loued.webp" alt="Le paysage côtier de Beg ar Loued reconstitué dans Unity." width="954" height="631" fetchpriority="high">
-          <div class="hero-project-caption">
-            <div><p class="eyebrow">PATRIMOINE / ENVIRONNEMENT 3D</p><p id="apercu-projet">Beg ar Loued</p></div>
-            <span class="round-arrow" aria-hidden="true">↗</span>
+        <div class="hero-showcase" data-showcase>
+          <div class="preview-tabs" role="tablist" aria-label="Trois univers à explorer" hidden>
+            <button type="button" role="tab" id="onglet-creation" data-preview="beg" aria-controls="apercu-creation" aria-selected="true" tabindex="0"><strong>Création</strong><span>Beg ar Loued</span></button>
+            <button type="button" role="tab" id="onglet-gestion" data-preview="verallia" aria-controls="apercu-gestion" aria-selected="false" tabindex="-1"><strong>Gestion</strong><span>Verallia</span></button>
+            <button type="button" role="tab" id="onglet-recherche" data-preview="cobot" aria-controls="apercu-recherche" aria-selected="false" tabindex="-1"><strong>Recherche</strong><span>Étude Cobot</span></button>
           </div>
-        </a>
-        <p class="hero-caption">Un aperçu de mon univers. <span aria-hidden="true">↗</span></p>
+          <div class="preview-stack">
+            <div class="preview-card is-active" id="apercu-creation" role="tabpanel" aria-labelledby="onglet-creation" data-preview-card="beg" data-depth="0">
+              <a class="hero-project" href="projets/beg-ar-loued.html" aria-labelledby="apercu-titre-creation">
+                <img src="assets/images/beg-ar-loued.webp" alt="Le paysage côtier de Beg ar Loued reconstitué dans Unity." width="954" height="631" fetchpriority="high">
+                <div class="hero-project-caption"><div><p class="eyebrow">PATRIMOINE / ENVIRONNEMENT 3D</p><p class="preview-title" id="apercu-titre-creation">Beg ar Loued</p></div><span class="round-arrow" aria-hidden="true">↗</span></div>
+              </a>
+            </div>
+            <div class="preview-card" id="apercu-gestion" role="tabpanel" aria-labelledby="onglet-gestion" data-preview-card="verallia" data-depth="1" aria-hidden="true" inert>
+              <a class="hero-project" href="projets/verallia.html" aria-labelledby="apercu-titre-gestion" tabindex="-1">
+                <img src="assets/images/verallia.webp" alt="Une machine de contrôle de l’usine Verallia, photographiée pour la visite immersive." width="1600" height="1067">
+                <div class="hero-project-caption"><div><p class="eyebrow">GESTION DE PROJET / VIDÉO 360°</p><p class="preview-title" id="apercu-titre-gestion">Verallia — Visite immersive</p></div><span class="round-arrow" aria-hidden="true">↗</span></div>
+              </a>
+            </div>
+            <div class="preview-card" id="apercu-recherche" role="tabpanel" aria-labelledby="onglet-recherche" data-preview-card="cobot" data-depth="2" aria-hidden="true" inert>
+              <a class="hero-project" href="projets/article-cobot.html" aria-labelledby="apercu-titre-recherche" tabindex="-1">
+                <img src="assets/images/article-cobot.webp" alt="Le poste expérimental de contrôle qualité avec un robot collaboratif." width="507" height="380">
+                <div class="hero-project-caption"><div><p class="eyebrow">RECHERCHE / HUMAIN–ROBOT</p><p class="preview-title" id="apercu-titre-recherche">Étude pilote Homme–Cobot</p></div><span class="round-arrow" aria-hidden="true">↗</span></div>
+              </a>
+            </div>
+          </div>
+          <p class="visually-hidden" role="status" aria-live="polite" data-preview-status></p>
+        </div>
+        <p class="hero-caption"><span class="preview-hint-static">Un aperçu de mon univers.</span><span class="preview-hint-mouse">Survole une catégorie pour changer de projet.</span><span class="preview-hint-touch">Touche une catégorie pour changer de projet.</span></p>
       </div>
       <div class="hero-footer">
         <p>MODÉLISER · EXPÉRIMENTER · COORDONNER</p>
@@ -57,14 +80,14 @@
     </section>
     <!-- BLOC 2 : les réalisations arrivent avant les rubriques pour montrer le travail plus vite. -->
     <section class="section-width section-block" id="selection" aria-labelledby="titre-selection">
-      <div class="section-heading"><div><p class="eyebrow">01 / QUELQUES RÉALISATIONS</p><h2 id="titre-selection">De l’idée à l’expérience.</h2></div><a class="text-link" href="#rubriques">Voir les quatre rubriques <span aria-hidden="true">↗</span></a></div>
+      <div class="section-heading" data-reveal><div><p class="eyebrow">01 / QUELQUES RÉALISATIONS</p><h2 id="titre-selection">De l’idée à l’expérience.</h2></div><a class="text-link" href="#rubriques">Voir les quatre rubriques <span aria-hidden="true">↗</span></a></div>
       <!-- Le stage long possède sa propre mise en avant, avant les trois réalisations sélectionnées. -->
-      <a class="project-spotlight" href="projets/stage-lirmm.html" aria-labelledby="accueil-lirmm">
+      <a class="project-spotlight" href="projets/stage-lirmm.html" aria-labelledby="accueil-lirmm" data-reveal>
         <div class="spotlight-image"><img src="assets/images/lirmm-hub.webp" alt="Le hub immersif développé pendant le stage au LIRMM." width="1600" height="815" loading="lazy"></div>
         <div class="spotlight-copy"><p class="eyebrow">STAGE DE FIN D’ÉTUDES · 6 MOIS AU LIRMM</p><h3 id="accueil-lirmm">Réalité virtuelle.<br>Intelligence artificielle.<br>Une expérience à construire.</h3><p>Du hub immersif à l’atelier Climate City : concevoir un parcours éducatif et y intégrer un assistant vocal.</p><span class="card-action">Découvrir le projet LIRMM <span aria-hidden="true">↗</span></span></div>
       </a>
       <div class="project-grid">
-      <article class="project-card">
+      <article class="project-card" data-reveal>
         <a class="project-link" href="projets/walking-in-place.html" aria-labelledby="carte-walking-in-place">
           <div class="project-image motion-image">
             <img src="assets/images/walking-in-place.webp" alt="Deux captures de suivi des articulations des jambes pendant la marche." loading="lazy" width="655" height="481">
@@ -77,7 +100,7 @@
           </div>
         </a>
       </article>
-      <article class="project-card">
+      <article class="project-card" data-reveal>
         <a class="project-link" href="projets/verallia.html" aria-labelledby="carte-verallia">
           <div class="project-image landscape-image">
             <img src="assets/images/verallia.webp" alt="Machine de contrôle photographiée dans l’usine Verallia pour les contenus de la visite." loading="lazy" width="1600" height="1067">
@@ -90,7 +113,7 @@
           </div>
         </a>
       </article>
-      <article class="project-card">
+      <article class="project-card" data-reveal>
         <a class="project-link" href="projets/article-cobot.html" aria-labelledby="carte-article-cobot">
           <div class="project-image research-image">
             <img src="assets/images/article-cobot.webp" alt="Poste expérimental de contrôle qualité avec le cobot et les pièces à inspecter." loading="lazy" width="507" height="380">
@@ -107,19 +130,19 @@
     </section>
     <!-- BLOC 3 : chaque ligne reste un lien vers une page de rubrique. -->
     <section class="section-width section-block rubrics-layout" id="rubriques" aria-labelledby="titre-rubriques">
-      <div class="rubrics-intro"><p class="eyebrow">02 / MES RUBRIQUES</p><h2 id="titre-rubriques">Plusieurs façons<br>de créer.</h2><p>Concevoir une expérience, porter un projet, explorer une question : découvre les différentes facettes de mon travail.</p><a class="text-link" href="a-propos.html">En savoir plus sur mon parcours <span aria-hidden="true">↗</span></a></div>
+      <div class="rubrics-intro" data-reveal><p class="eyebrow">02 / MES RUBRIQUES</p><h2 id="titre-rubriques">Plusieurs façons<br>de créer.</h2><p>Concevoir une expérience, porter un projet, explorer une question : découvre les différentes facettes de mon travail.</p><a class="text-link" href="a-propos.html">En savoir plus sur mon parcours <span aria-hidden="true">↗</span></a></div>
       <div class="rubric-list">
-        <a href="creations.html"><span class="rubric-number">01</span><div><h3>Créations numériques</h3><p>3D, réalité augmentée et expériences interactives.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
-        <a href="gestion-projet.html"><span class="rubric-number">02</span><div><h3>Gestion de projet</h3><p>Le contexte, le travail d’équipe et le parcours des réalisations.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
-        <a href="recherche.html"><span class="rubric-number">03</span><div><h3>Recherche &amp; publications</h3><p>Études scientifiques, expérimentation et articles collectifs.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
-        <a href="explorations.html"><span class="rubric-number">04</span><div><h3>Explorations</h3><p>Tester. Apprendre. Créer. Mes projets personnels.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="creations.html" data-reveal><span class="rubric-number">01</span><div><h3>Créations numériques</h3><p>3D, réalité augmentée et expériences interactives.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="gestion-projet.html" data-reveal><span class="rubric-number">02</span><div><h3>Gestion de projet</h3><p>Le contexte, le travail d’équipe et le parcours des réalisations.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="recherche.html" data-reveal><span class="rubric-number">03</span><div><h3>Recherche &amp; publications</h3><p>Études scientifiques, expérimentation et articles collectifs.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="explorations.html" data-reveal><span class="rubric-number">04</span><div><h3>Explorations</h3><p>Tester. Apprendre. Créer. Mes projets personnels.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
       </div>
     </section>
     <section class="section-width section-block research-feature exploration-feature" aria-labelledby="titre-explorations">
-      <div><p class="eyebrow">03 / EXPLORATIONS</p><h2 id="titre-explorations">Apprendre en faisant.</h2><p>De la numérisation 3D à la création de ce portfolio, mes explorations donnent une place aux essais, aux difficultés et aux apprentissages.</p><a class="text-link" href="explorations.html">Parcourir les explorations ↗</a></div>
-      <a href="projets/numerisation-3d.html" aria-label="Découvrir l’exploration de numérisation 3D"><img src="assets/images/numerisation-3d.webp" alt="Un des essais de numérisation 3D de ma personne." width="294" height="591" loading="lazy"></a>
+      <div data-reveal><p class="eyebrow">03 / EXPLORATIONS</p><h2 id="titre-explorations">Apprendre en faisant.</h2><p>De la numérisation 3D à la création de ce portfolio, mes explorations donnent une place aux essais, aux difficultés et aux apprentissages.</p><a class="text-link" href="explorations.html">Parcourir les explorations ↗</a></div>
+      <a href="projets/numerisation-3d.html" aria-label="Découvrir l’exploration de numérisation 3D" data-reveal><img src="assets/images/numerisation-3d.webp" alt="Un des essais de numérisation 3D de ma personne." width="294" height="591" loading="lazy"></a>
     </section>
-    <section class="contact-band" aria-labelledby="titre-contact"><div class="section-width contact-inner"><div><p class="eyebrow">ET LA SUITE ?</p><h2 id="titre-contact">Et si on<br>échangeait ?</h2><p>Une opportunité, un projet ou simplement une question.</p></div><a class="button contact-button" href="contact.html">Parlons de votre projet <span aria-hidden="true">↗</span></a></div></section>
+    <section class="contact-band" aria-labelledby="titre-contact"><div class="section-width contact-inner" data-reveal><div><p class="eyebrow">ET LA SUITE ?</p><h2 id="titre-contact">Et si on<br>échangeait ?</h2><p>Une opportunité, un projet ou simplement une question.</p></div><a class="button contact-button" href="contact.html">Parlons de votre projet <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="section-width site-footer">
     <p>© 2026 Arnaud Carbonnel</p>

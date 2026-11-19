@@ -6,6 +6,8 @@
 !/.gitignore
 !/*.html
 !/style.css
+# Script local relu : aperçus de l’accueil et apparitions au défilement.
+!/interactions.js
 !/projets/
 !/projets/*.html
 !/assets/
