@@ -8,6 +8,8 @@
 !/style.css
 # Script local relu : aperçus de l’accueil et apparitions au défilement.
 !/interactions.js
+# Galerie locale : agrandissement des images des fiches.
+!/galerie.js
 !/projets/
 !/projets/*.html
 !/assets/
@@ -18,3 +20,4 @@
 !/assets/videos/*.mp4
 !/assets/documents/
 !/assets/documents/article-cobot.pdf
+!/assets/documents/cv-arnaud-carbonnel.pdf

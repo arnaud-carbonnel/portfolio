@@ -6,8 +6,9 @@
   <title>Beg ar Loued — Arnaud Carbonnel</title>
   <meta name="description" content="Reconstituer un paysage côtier ancien et le rendre explorable en réalité virtuelle.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,9 +39,18 @@
       <dl class="project-facts">
         <div><dt>Cadre</dt><dd>Stage de Master · 2024–2025</dd></div><div><dt>Outil principal</dt><dd>Unity</dd></div><div><dt>Sujet</dt><dd>Paysage · Patrimoine · Médiation</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Replacer la maison de Beg ar Loued dans son paysage côtier ancien et rendre cette reconstitution compréhensible pendant une visite VR.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Reconstituer l’environnement dans Unity, organiser la végétation et intégrer les panneaux et interactions, à partir d’une maison 3D préexistante.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Une scène explorable en réalité virtuelle, des panneaux de médiation et une animation de l’évolution du littoral, fondées sur des données et des hypothèses explicites.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/beg-ar-loued.webp" aria-label="Agrandir : Paysage côtier reconstitué autour de la maison de Beg ar Loued dans Unity.">
+        <a data-gallery href="../assets/images/beg-ar-loued.webp" aria-label="Agrandir : Paysage côtier reconstitué autour de la maison de Beg ar Loued dans Unity.">
           <img src="../assets/images/beg-ar-loued.webp" alt="Paysage côtier reconstitué autour de la maison de Beg ar Loued dans Unity." loading="lazy" width="954" height="631">
         </a>
         <figcaption>Reconstitution de l’environnement de Beg ar Loued : végétation, maison et littoral.</figcaption>
@@ -73,7 +83,7 @@
             <p>La végétation est organisée selon un gradient allant du littoral vers les abords de la maison, puis vers un boisement en retrait. Les essences et les densités s’appuient sur les références étudiées et les échanges avec les encadrants. Les textures de sol complètent cette organisation. Le placement des arbres et des arbustes garde des vues sur la maison et le rivage, afin que le paysage reste lisible pendant les déplacements.</p>
             <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/beg-ar-loued-maison.webp" aria-label="Agrandir : Vue rapprochée de la maison préexistante dans son environnement reconstitué.">
+        <a data-gallery href="../assets/images/beg-ar-loued-maison.webp" aria-label="Agrandir : Vue rapprochée de la maison préexistante dans son environnement reconstitué.">
           <img src="../assets/images/beg-ar-loued-maison.webp" alt="Vue rapprochée de la maison préexistante dans son environnement reconstitué." loading="lazy" width="960" height="626">
         </a>
         <figcaption>La maison 3D préexistante sert de point d’ancrage au travail sur le paysage.</figcaption>
@@ -87,7 +97,7 @@
             <p>Quatre thèmes accompagnent la visite : la maison, le niveau de la mer, la flore et les arbustes. Les panneaux sont associés à des zones d’activation. Ils apparaissent lorsque le visiteur s’approche et disparaissent lorsqu’il s’éloigne. Leur lisibilité, leur distance d’affichage et leur place dans le champ de vision font partie des réglages. Une animation du littoral complète la visite pour illustrer l’évolution du paysage dans le temps.</p>
             <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/beg-ar-loued-panneaux.webp" aria-label="Agrandir : Panneau d’information activé près de la maison dans la scène Unity.">
+        <a data-gallery href="../assets/images/beg-ar-loued-panneaux.webp" aria-label="Agrandir : Panneau d’information activé près de la maison dans la scène Unity.">
           <img src="../assets/images/beg-ar-loued-panneaux.webp" alt="Panneau d’information activé près de la maison dans la scène Unity." loading="lazy" width="959" height="626">
         </a>
         <figcaption>Les panneaux apportent des explications pendant l’exploration.</figcaption>
@@ -125,6 +135,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="stage-lirmm.html">
+              <div class="project-image"><img loading="lazy" src="../assets/images/lirmm-hub.webp" alt="" width="1600" height="815" fetchpriority="high"></div>
+              <div class="card-copy"><p class="eyebrow">LIRMM · ÉQUIPE ADVANSE · STAGE DE FIN D’ÉTUDES</p><h3>Concevoir une expérience VR accompagnée par l’IA.</h3><p>Prolonger la découverte des parcours immersifs et de leurs interactions.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="little-archeologist.html">
+              <div class="project-image"><img src="../assets/images/little-archeologist.webp" alt="" loading="lazy" width="990" height="1400"></div>
+              <div class="card-copy"><p class="eyebrow">Gestion de projet · Réalité augmentée</p><h3>Little Archeologist</h3><p>Retrouver la médiation archéologique dans une expérience collective en réalité augmentée.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../creations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
     </article>
   </main>

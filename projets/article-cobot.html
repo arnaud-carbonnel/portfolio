@@ -6,8 +6,9 @@
   <title>Étude pilote Homme–Cobot — Arnaud Carbonnel</title>
   <meta name="description" content="Étudier comment l’introduction progressive d’un robot collaboratif influence l’expérience des opérateurs.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,9 +39,18 @@
       <dl class="project-facts">
         <div><dt>Contribution</dt><dd>Pré-étude · Tests · Analyse · Article collectif</dd></div><div><dt>Cadre</dt><dd>Master · SAGIP 2026</dd></div><div><dt>Publication</dt><dd>Archive HAL · Septembre 2026</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Examiner comment l’introduction et la vitesse d’un robot collaboratif influencent l’expérience d’un opérateur pendant une activité de contrôle qualité.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Participer, dans le cadre du Master, aux premiers tests, à l’analyse et à la rédaction collective d’un premier article scientifique.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Une pré-étude et une publication dont je suis coauteur. Les observations servent à préparer une expérimentation plus poussée et ne constituent pas une validation à grande échelle.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure research-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/article-cobot.webp" aria-label="Agrandir : Poste expérimental de contrôle qualité avec le cobot et les pièces à inspecter.">
+        <a data-gallery href="../assets/images/article-cobot.webp" aria-label="Agrandir : Poste expérimental de contrôle qualité avec le cobot et les pièces à inspecter.">
           <img src="../assets/images/article-cobot.webp" alt="Poste expérimental de contrôle qualité avec le cobot et les pièces à inspecter." loading="lazy" width="507" height="380">
         </a>
         <figcaption>Poste expérimental, extrait de la figure 1. Joblot et al., 2026, <a href="https://hal.science/hal-05746496v1">HAL hal-05746496v1</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
@@ -74,7 +84,7 @@
             <ul class="case-list"><li>Passage d’un cobot lent à un cobot rapide.</li><li>Passage d’une inspection manuelle à une assistance lente.</li><li>Passage d’une inspection manuelle à une assistance rapide.</li></ul>
             <figure class="case-figure research-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/cobot-protocole.webp" aria-label="Agrandir : Schéma de la procédure : préparation, deux tâches successives et questionnaires.">
+        <a data-gallery href="../assets/images/cobot-protocole.webp" aria-label="Agrandir : Schéma de la procédure : préparation, deux tâches successives et questionnaires.">
           <img src="../assets/images/cobot-protocole.webp" alt="Schéma de la procédure : préparation, deux tâches successives et questionnaires." loading="lazy" width="816" height="473">
         </a>
         <figcaption>Procédure expérimentale, extrait de la figure 1. Joblot et al., 2026, <a href="https://hal.science/hal-05746496v1">HAL</a>, <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
@@ -104,6 +114,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="stage-lirmm.html">
+              <div class="project-image"><img loading="lazy" src="../assets/images/lirmm-hub.webp" alt="" width="1600" height="815" fetchpriority="high"></div>
+              <div class="card-copy"><p class="eyebrow">LIRMM · ÉQUIPE ADVANSE · STAGE DE FIN D’ÉTUDES</p><h3>Concevoir une expérience VR accompagnée par l’IA.</h3><p>Retrouver une démarche de tests utilisateurs sur un prototype immersif.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="navigation-bras.html">
+              <div class="project-image"><img src="../assets/images/navigation-bras.webp" alt="" loading="lazy" width="835" height="1400"></div>
+              <div class="card-copy"><p class="eyebrow">Interaction gestuelle · Python &amp; Unity</p><h3>Naviguer avec les bras</h3><p>Observer comment plusieurs modes d’interaction sont comparés et discutés.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../recherche.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
     </article>
   </main>

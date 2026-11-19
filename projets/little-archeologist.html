@@ -6,8 +6,9 @@
   <title>Little Archeologist — Arnaud Carbonnel</title>
   <meta name="description" content="Rendre l’archéologie accessible aux enfants grâce à une application de découverte.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,9 +39,18 @@
       <dl class="project-facts">
         <div><dt>Cadre</dt><dd>11e défi Chal’enge · Équipe</dd></div><div><dt>Contribution</dt><dd>Gestion de projet · Montage · Développement · UI/UX</dd></div><div><dt>Outils graphiques</dt><dd>Blender · Substance Painter</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Rendre l’archéologie accessible aux enfants grâce à une expérience en réalité augmentée et à des supports de présentation adaptés.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Participer à la gestion du projet, réaliser le montage vidéo et contribuer au développement et au design UI/UX, avec Blender et Substance Painter.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Une application et des supports de présentation réalisés en équipe, récompensés par le Prix de l’Innovation RA de la 11e édition du défi Chal’enge.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure poster-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/little-archeologist.webp" aria-label="Agrandir : Affiche de Little Archeologist et de son univers archéologique destiné aux enfants.">
+        <a data-gallery href="../assets/images/little-archeologist.webp" aria-label="Agrandir : Affiche de Little Archeologist et de son univers archéologique destiné aux enfants.">
           <img src="../assets/images/little-archeologist.webp" alt="Affiche de Little Archeologist et de son univers archéologique destiné aux enfants." loading="lazy" width="990" height="1400">
         </a>
         <figcaption>Affiche de présentation de Little Archeologist.</figcaption>
@@ -105,6 +115,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="verallia.html">
+              <div class="project-image"><img src="../assets/images/verallia.webp" alt="" loading="lazy" width="1600" height="1067"></div>
+              <div class="card-copy"><p class="eyebrow">Vidéo 360° · Unity · Gestion de projet</p><h3>Verallia — visite immersive</h3><p>Découvrir mon rôle de chef de projet en relation avec une entreprise.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="beg-ar-loued.html">
+              <div class="project-image"><img src="../assets/images/beg-ar-loued.webp" alt="" loading="lazy" width="954" height="631"></div>
+              <div class="card-copy"><p class="eyebrow">Patrimoine · Environnement 3D · VR</p><h3>Beg ar Loued</h3><p>Explorer une autre façon de raconter le patrimoine à travers la 3D.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../gestion-projet.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
     </article>
   </main>

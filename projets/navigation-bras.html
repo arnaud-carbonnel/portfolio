@@ -6,8 +6,9 @@
   <title>Naviguer avec les bras — Arnaud Carbonnel</title>
   <meta name="description" content="Explorer trois façons de se déplacer dans un environnement virtuel avec les gestes des bras et des mains.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,9 +39,18 @@
       <dl class="project-facts">
         <div><dt>Cadre</dt><dd>Projet Junior · 2024–2025</dd></div><div><dt>Outils</dt><dd>MediaPipe · OpenCV · Unity</dd></div><div><dt>Approche</dt><dd>Trois modes de navigation</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Explorer plusieurs manières de diriger un déplacement virtuel avec les bras et les mains, à partir de gestes observés par une caméra.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Développer les règles de reconnaissance des gestes et leur liaison avec Unity, puis comparer trois modes de navigation dans un parcours d’essai.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Trois modes testés : 2-Hands Flying, Grabbing the Air et Hand Control. Les observations exploratoires font ressortir des différences de prise en main et de reconnaissance.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure motion-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/navigation-bras.webp" aria-label="Agrandir : Capture du geste à deux mains utilisé pour piloter la navigation.">
+        <a data-gallery href="../assets/images/navigation-bras.webp" aria-label="Agrandir : Capture du geste à deux mains utilisé pour piloter la navigation.">
           <img src="../assets/images/navigation-bras.webp" alt="Capture du geste à deux mains utilisé pour piloter la navigation." loading="lazy" width="835" height="1400">
         </a>
         <figcaption>Capture du mode 2-Hands Flying : les poignets servent de repères pour le déplacement.</figcaption>
@@ -73,7 +83,7 @@
             <ul class="case-list"><li><strong>2-Hands Flying :</strong> l’écartement et l’orientation des poignets contrôlent le déplacement.</li><li><strong>Grabbing the Air :</strong> une main fermée qui se rapproche du corps simule une traction ; la main ouverte sert à orienter le déplacement.</li><li><strong>Hand Control Flying Speed :</strong> la position de l’index par rapport au haut du corps sert à gérer la vitesse et la direction.</li></ul>
             <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/navigation-traction.webp" aria-label="Agrandir : Main fermée détectée pour le mode de navigation par traction.">
+        <a data-gallery href="../assets/images/navigation-traction.webp" aria-label="Agrandir : Main fermée détectée pour le mode de navigation par traction.">
           <img src="../assets/images/navigation-traction.webp" alt="Main fermée détectée pour le mode de navigation par traction." loading="lazy" width="831" height="676">
         </a>
         <figcaption>Grabbing the Air : reconnaître une fermeture de main puis une traction.</figcaption>
@@ -87,7 +97,7 @@
             <p>L’expérimentation décrite comprend une présentation des gestes, un parcours guidé, une exploration libre et un questionnaire. Ce déroulement permet de regarder à la fois le fonctionnement du système et la manière dont les interactions sont comprises. Les retours portent notamment sur la réactivité, la naturalité du mouvement, le réalisme et le confort. Le nombre de participants n’étant pas précisé dans le rapport, ces résultats sont présentés ici comme des observations exploratoires.</p>
             <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/navigation-direction.webp" aria-label="Agrandir : Capture de la reconnaissance d’un geste de direction avec l’index.">
+        <a data-gallery href="../assets/images/navigation-direction.webp" aria-label="Agrandir : Capture de la reconnaissance d’un geste de direction avec l’index.">
           <img src="../assets/images/navigation-direction.webp" alt="Capture de la reconnaissance d’un geste de direction avec l’index." loading="lazy" width="928" height="700">
         </a>
         <figcaption>Hand Control : interpréter la position et l’orientation de la main.</figcaption>
@@ -103,6 +113,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="walking-in-place.html">
+              <div class="project-image"><img src="../assets/images/walking-in-place.webp" alt="" loading="lazy" width="655" height="481"></div>
+              <div class="card-copy"><p class="eyebrow">Interaction · Python &amp; Unity</p><h3>Walking in Place</h3><p>Découvrir une autre commande corporelle, fondée sur la marche.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="article-cobot.html">
+              <div class="project-image"><img src="../assets/images/article-cobot.webp" alt="" loading="lazy" width="507" height="380"></div>
+              <div class="card-copy"><p class="eyebrow">Recherche · Coauteur · SAGIP 2026</p><h3>Étude pilote Homme–Cobot</h3><p>Poursuivre avec une étude de l’expérience humaine face à un système interactif.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../creations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
     </article>
   </main>

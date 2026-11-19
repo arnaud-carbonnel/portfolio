@@ -6,8 +6,9 @@
   <title>Stage LIRMM — Réalité virtuelle &amp; IA — Arnaud Carbonnel</title>
   <meta name="description" content="Six mois au LIRMM : conception et développement d’un prototype éducatif en réalité virtuelle, avec Climate City et un assistant vocal IA.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,8 +39,17 @@
         <div><dt>Contribution</dt><dd>Conception · Développement · Intégration</dd></div>
         <div><dt>Technologies</dt><dd>Unity 6 · Meta Quest · FastAPI · IA</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Rendre des phénomènes environnementaux compréhensibles grâce à un parcours immersif associant observation, expérimentation et dialogue.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Concevoir et développer le prototype Unity pour Meta Quest, relier les ateliers à un assistant vocal IA et mener une pré-étude d’utilisabilité.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Un prototype réunissant hub, ateliers et assistant ; dix participants à la pré-étude, avec un score SUS moyen de 76,5/100. L’efficacité pédagogique reste à évaluer.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure lirmm-image">
-      <a href="../assets/images/lirmm-hub.webp" aria-label="Agrandir : Hub VR du projet LIRMM, avec un arbre central et les portails d’accès aux ateliers."><img src="../assets/images/lirmm-hub.webp" alt="Hub VR du projet LIRMM, avec un arbre central et les portails d’accès aux ateliers." width="1600" height="815" fetchpriority="high"></a>
+      <a data-gallery href="../assets/images/lirmm-hub.webp" aria-label="Agrandir : Hub VR du projet LIRMM, avec un arbre central et les portails d’accès aux ateliers."><img src="../assets/images/lirmm-hub.webp" alt="Hub VR du projet LIRMM, avec un arbre central et les portails d’accès aux ateliers." width="1600" height="815" fetchpriority="high"></a>
       <figcaption>Le hub relie les différents modules du prototype. Capture extraite du rapport de stage. <a href="../assets/images/lirmm-hub.webp">Voir le visuel en grand</a></figcaption>
     </figure>
       <div class="case-layout">
@@ -100,7 +110,7 @@
 <p>Climate City est l’atelier interactif central du prototype. L’utilisateur construit une ville sur une grille de 8 × 8 cases en sélectionnant des maisons, des routes, des éoliennes, des usines et des parcs. Un aperçu coloré indique si le placement est possible, s’il remplace un élément existant ou s’il est refusé. Les objets peuvent être tournés, déplacés et supprimés, ce qui permet de tester une organisation puis de la corriger.</p>
 <p>Chaque modification entraîne un nouveau calcul des indicateurs : CO₂, satisfaction, énergie, mobilité et résilience. Le système prend en compte les connexions routières, l’accès aux usines, l’équilibre entre production et demande d’énergie, ainsi que la proximité des espaces verts. Il ne suffit donc pas d’ajouter des bâtiments : leurs relations spatiales comptent. Par exemple, une usine peut contribuer à l’activité de la ville tout en pénalisant son bilan écologique ou le confort des maisons voisines.</p>
 <p>La validation vérifie également des conditions de construction afin qu’une moyenne élevée ne masque pas une ville incomplète. Le score et le détail des indicateurs donnent un retour sur l’essai, et un classement local permet de comparer plusieurs configurations. Ces valeurs constituent un modèle pédagogique simplifié ; elles ne représentent pas les émissions réelles d’une ville. Leur rôle est de rendre les compromis visibles et discutables.</p><figure class="case-figure lirmm-image">
-      <a href="../assets/images/lirmm-climate-city.webp" aria-label="Agrandir : Plateau de Climate City, consignes et jauges de suivi dans l’environnement Unity."><img src="../assets/images/lirmm-climate-city.webp" alt="Plateau de Climate City, consignes et jauges de suivi dans l’environnement Unity." width="1600" height="762" loading="lazy"></a>
+      <a data-gallery href="../assets/images/lirmm-climate-city.webp" aria-label="Agrandir : Plateau de Climate City, consignes et jauges de suivi dans l’environnement Unity."><img src="../assets/images/lirmm-climate-city.webp" alt="Plateau de Climate City, consignes et jauges de suivi dans l’environnement Unity." width="1600" height="762" loading="lazy"></a>
       <figcaption>L’atelier de construction et les indicateurs qui accompagnent les choix. Capture extraite du rapport de stage. <a href="../assets/images/lirmm-climate-city.webp">Voir le visuel en grand</a></figcaption>
     </figure>
           </section>
@@ -110,11 +120,11 @@
             
 <p>L’assistant prend la forme d’un bracelet d’eau visible au poignet. Ses états signalent la prise en compte d’une demande et la lecture de la réponse, sans ajouter un personnage qui occuperait l’espace. L’utilisateur maintient le bouton X du contrôleur gauche pour enregistrer une question. Une fois l’enregistrement terminé, la demande est transcrite, complétée par le contexte disponible, puis envoyée au modèle de langage. La réponse est ensuite lue dans le casque.</p>
 <p>Un second échange part d’une capture de la vue affichée dans Unity, déclenchée avec le bouton Y. Le modèle peut en produire une description. Le contexte peut aussi inclure la zone traversée, un objet décrit dans l’axe de la caméra et des extraits d’une base documentaire. Cette capture correspond à la vue du casque, pas à un suivi des yeux. Dans la version documentée, toutes les descriptions d’objets n’étaient pas encore renseignées et les jauges de Climate City n’étaient pas transmises au dialogue.</p><figure class="case-figure lirmm-image">
-      <a href="../assets/images/lirmm-assistant.webp" aria-label="Agrandir : Architecture : le casque envoie la demande au serveur IA local, puis reçoit une réponse vocale."><img src="../assets/images/lirmm-assistant.webp" alt="Architecture : le casque envoie la demande au serveur IA local, puis reçoit une réponse vocale." width="1600" height="800" loading="lazy"></a>
+      <a data-gallery href="../assets/images/lirmm-assistant.webp" aria-label="Agrandir : Architecture : le casque envoie la demande au serveur IA local, puis reçoit une réponse vocale."><img src="../assets/images/lirmm-assistant.webp" alt="Architecture : le casque envoie la demande au serveur IA local, puis reçoit une réponse vocale." width="1600" height="800" loading="lazy"></a>
       <figcaption>Répartition des traitements entre le casque, le serveur et la synthèse vocale. Schéma du rapport de stage. <a href="../assets/images/lirmm-assistant.webp">Voir le visuel en grand</a></figcaption>
     </figure>
 <p>L’architecture sépare l’application immersive et les traitements IA. Unity gère les scènes et les interactions ; un serveur FastAPI, sur un ordinateur du même réseau, prend en charge la transcription, le modèle de langage et l’analyse d’image. La synthèse vocale repose encore sur le service en ligne edge-TTS : la chaîne complète nécessite donc une connexion à Internet. Cette séparation permet de faire évoluer les traitements sans imposer leur exécution au casque autonome.</p><figure class="case-figure lirmm-image">
-      <a href="../assets/images/lirmm-bracelet.webp" aria-label="Agrandir : Bracelet d’eau de l’assistant autour du poignet de la main virtuelle."><img src="../assets/images/lirmm-bracelet.webp" alt="Bracelet d’eau de l’assistant autour du poignet de la main virtuelle." width="580" height="363" loading="lazy"></a>
+      <a data-gallery href="../assets/images/lirmm-bracelet.webp" aria-label="Agrandir : Bracelet d’eau de l’assistant autour du poignet de la main virtuelle."><img src="../assets/images/lirmm-bracelet.webp" alt="Bracelet d’eau de l’assistant autour du poignet de la main virtuelle." width="580" height="363" loading="lazy"></a>
       <figcaption>Une présence visuelle discrète pour accompagner les échanges avec l’assistant. Capture du rapport. <a href="../assets/images/lirmm-bracelet.webp">Voir le visuel en grand</a></figcaption>
     </figure>
 <figure class="project-video" id="video-assistant">
@@ -131,7 +141,7 @@
             
 <p>Le Gaussian Splatting permet d’explorer une représentation issue de prises de vue réelles. Son intégration sur Meta Quest impose toutefois de trouver un équilibre entre richesse visuelle et coût de rendu. Trois niveaux de détail ont été importés ; la scène documentée utilise la version d’environ 159 000 gaussiennes, la plus légère des trois. Le travail d’intégration adapte également le rendu aux deux vues du casque et réduit la fréquence de certaines opérations de tri.</p>
 <p>Une représentation par Gaussian Splatting ne fournit pas automatiquement des collisions ni des objets identifiés comme dans une scène Unity classique. Il faut ajouter les éléments nécessaires aux déplacements et décrire les zones utiles à l’assistant. Ce travail m’a confronté à des contraintes qui dépassent l’apparence d’un modèle : rendre une scène explorable, maintenir une interaction compréhensible et préparer les mesures de performance. La cible de fluidité indiquée dans le rapport restait à vérifier par des relevés sur le casque.</p><figure class="case-figure lirmm-image">
-      <a href="../assets/images/lirmm-gaussian.webp" aria-label="Agrandir : Représentation d’un ensemble architectural en Gaussian Splatting, importée dans Unity."><img src="../assets/images/lirmm-gaussian.webp" alt="Représentation d’un ensemble architectural en Gaussian Splatting, importée dans Unity." width="1357" height="735" loading="lazy"></a>
+      <a data-gallery href="../assets/images/lirmm-gaussian.webp" aria-label="Agrandir : Représentation d’un ensemble architectural en Gaussian Splatting, importée dans Unity."><img src="../assets/images/lirmm-gaussian.webp" alt="Représentation d’un ensemble architectural en Gaussian Splatting, importée dans Unity." width="1357" height="735" loading="lazy"></a>
       <figcaption>Un exemple de représentation 3D utilisé pour explorer l’intégration du Gaussian Splatting. Capture du rapport. <a href="../assets/images/lirmm-gaussian.webp">Voir le visuel en grand</a></figcaption>
     </figure>
 <figure class="project-video" id="video-gaussian">
@@ -160,6 +170,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="beg-ar-loued.html">
+              <div class="project-image"><img src="../assets/images/beg-ar-loued.webp" alt="" loading="lazy" width="954" height="631"></div>
+              <div class="card-copy"><p class="eyebrow">Patrimoine · Environnement 3D · VR</p><h3>Beg ar Loued</h3><p>Une autre expérience de médiation en réalité virtuelle, autour du patrimoine.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="article-cobot.html">
+              <div class="project-image"><img src="../assets/images/article-cobot.webp" alt="" loading="lazy" width="507" height="380"></div>
+              <div class="card-copy"><p class="eyebrow">Recherche · Coauteur · SAGIP 2026</p><h3>Étude pilote Homme–Cobot</h3><p>Approfondir la démarche de pré-étude, de tests et d’analyse des retours.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../recherche.html">Retour à la recherche</a><a class="text-link" href="../creations.html">Voir les créations numériques</a></div>
     </article>
   </main>

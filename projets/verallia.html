@@ -6,8 +6,9 @@
   <title>Verallia — visite immersive — Arnaud Carbonnel</title>
   <meta name="description" content="Faire découvrir la fabrication du verre à travers une visite immersive de l’usine de Chalon-sur-Saône.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,9 +39,18 @@
       <dl class="project-facts">
         <div><dt>Rôle</dt><dd>Chef de projet</dd></div><div><dt>Périmètre</dt><dd>Cadrage · Coordination · Développement</dd></div><div><dt>Support</dt><dd>Application VR · Vidéos 360°</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Faire découvrir une usine et les étapes de fabrication du verre dans une visite immersive destinée à un public extérieur à l’entreprise.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Assurer le rôle de chef de projet : relation entreprise–équipe, cahier des charges, développement Unity, suivi et comptes rendus.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Une visite virtuelle appuyée sur des séquences à 360°, accompagnée de scénarios, de documents de cadrage et d’exports de l’application.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/verallia.webp" aria-label="Agrandir : Machine de contrôle photographiée dans l’usine Verallia pour les contenus de la visite.">
+        <a data-gallery href="../assets/images/verallia.webp" aria-label="Agrandir : Machine de contrôle photographiée dans l’usine Verallia pour les contenus de la visite.">
           <img src="../assets/images/verallia.webp" alt="Machine de contrôle photographiée dans l’usine Verallia pour les contenus de la visite." loading="lazy" width="1600" height="1067">
         </a>
         <figcaption>Photographie d’une machine de contrôle utilisée parmi les contenus du projet.</figcaption>
@@ -81,7 +91,7 @@
             <p>Le système de visite gère l’activation des séquences, leur durée, le positionnement de la caméra et les transitions en fondu entre les étapes. Il organise également l’apparition des contenus explicatifs au fil du parcours. Ces fonctions permettent d’articuler les prises de vue et les informations dans une expérience continue. Le travail d’intégration donne ainsi une forme interactive au scénario défini en amont, en tenant compte de la présentation dans le casque.</p>
             <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/verallia-accueil.webp" aria-label="Agrandir : Espace d’accueil Verallia photographié pour préparer la visite.">
+        <a data-gallery href="../assets/images/verallia-accueil.webp" aria-label="Agrandir : Espace d’accueil Verallia photographié pour préparer la visite.">
           <img src="../assets/images/verallia-accueil.webp" alt="Espace d’accueil Verallia photographié pour préparer la visite." loading="lazy" width="1600" height="1067">
         </a>
         <figcaption>Repérage et préparation des contenus de la visite.</figcaption>
@@ -111,6 +121,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="little-archeologist.html">
+              <div class="project-image"><img src="../assets/images/little-archeologist.webp" alt="" loading="lazy" width="990" height="1400"></div>
+              <div class="card-copy"><p class="eyebrow">Gestion de projet · Réalité augmentée</p><h3>Little Archeologist</h3><p>Un autre projet collectif associant coordination, conception et production.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="stage-lirmm.html">
+              <div class="project-image"><img loading="lazy" src="../assets/images/lirmm-hub.webp" alt="" width="1600" height="815" fetchpriority="high"></div>
+              <div class="card-copy"><p class="eyebrow">LIRMM · ÉQUIPE ADVANSE · STAGE DE FIN D’ÉTUDES</p><h3>Concevoir une expérience VR accompagnée par l’IA.</h3><p>Explorer un prototype plus long, de l’analyse du besoin aux tests utilisateurs.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../gestion-projet.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
     </article>
   </main>

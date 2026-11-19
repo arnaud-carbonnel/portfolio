@@ -6,8 +6,9 @@
   <title>Walking in Place — Arnaud Carbonnel</title>
   <meta name="description" content="Transformer les mouvements des jambes filmés en déplacement dans une scène Unity.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -38,9 +39,18 @@
       <dl class="project-facts">
         <div><dt>Cadre</dt><dd>Master · 2024–2025</dd></div><div><dt>Outils</dt><dd>Python · MediaPipe · Unity</dd></div><div><dt>Format</dt><dd>Prototype de locomotion</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Transformer une marche sur place filmée en déplacement d’une caméra virtuelle, pour explorer une commande fondée sur les mouvements du corps.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Relier le suivi des jambes avec Python et MediaPipe au calcul d’une vitesse, puis transmettre cette commande à Unity par UDP.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Une chaîne fonctionnelle entre vidéo enregistrée et navigation 3D, avec cinq essais exploratoires. Le lissage du mouvement et l’intégration dans un casque restent à poursuivre.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure motion-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/walking-in-place.webp" aria-label="Agrandir : Deux captures de suivi des articulations des jambes pendant la marche.">
+        <a data-gallery href="../assets/images/walking-in-place.webp" aria-label="Agrandir : Deux captures de suivi des articulations des jambes pendant la marche.">
           <img src="../assets/images/walking-in-place.webp" alt="Deux captures de suivi des articulations des jambes pendant la marche." loading="lazy" width="655" height="481">
         </a>
         <figcaption>Suivi des mouvements des jambes dans la vidéo utilisée pour le prototype.</figcaption>
@@ -74,7 +84,7 @@
             <ol class="process-list"><li><strong>Observer</strong><span>Lire la vidéo et détecter les articulations.</span></li><li><strong>Interpréter</strong><span>Transformer les mouvements en une vitesse estimée.</span></li><li><strong>Transmettre</strong><span>Envoyer cette valeur à Unity par UDP.</span></li><li><strong>Déplacer</strong><span>Faire avancer la caméra dans la scène.</span></li></ol>
             <figure class="case-figure landscape-image">
         <!-- Le lien ouvre le visuel en grand ; alt décrit ce que montre l’image. -->
-        <a href="../assets/images/wip-environnement.webp" aria-label="Agrandir : Vue de l’environnement Unity utilisé pour le déplacement de la caméra.">
+        <a data-gallery href="../assets/images/wip-environnement.webp" aria-label="Agrandir : Vue de l’environnement Unity utilisé pour le déplacement de la caméra.">
           <img src="../assets/images/wip-environnement.webp" alt="Vue de l’environnement Unity utilisé pour le déplacement de la caméra." loading="lazy" width="1600" height="911">
         </a>
         <figcaption>Environnement de démonstration utilisé pour tester la navigation. Le travail présenté porte sur le suivi du mouvement et son intégration.</figcaption>
@@ -112,6 +122,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="navigation-bras.html">
+              <div class="project-image"><img src="../assets/images/navigation-bras.webp" alt="" loading="lazy" width="835" height="1400"></div>
+              <div class="card-copy"><p class="eyebrow">Interaction gestuelle · Python &amp; Unity</p><h3>Naviguer avec les bras</h3><p>Comparer la marche à trois modes de navigation commandés par les bras.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="stage-lirmm.html">
+              <div class="project-image"><img loading="lazy" src="../assets/images/lirmm-hub.webp" alt="" width="1600" height="815" fetchpriority="high"></div>
+              <div class="card-copy"><p class="eyebrow">LIRMM · ÉQUIPE ADVANSE · STAGE DE FIN D’ÉTUDES</p><h3>Concevoir une expérience VR accompagnée par l’IA.</h3><p>Découvrir des interactions intégrées à un parcours complet sur Meta Quest.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return"><a class="button" href="../creations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a></div>
     </article>
   </main>

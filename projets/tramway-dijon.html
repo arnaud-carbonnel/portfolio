@@ -6,8 +6,9 @@
   <title>Le tramway de Dijon — Arnaud Carbonnel</title>
   <meta name="description" content="Modéliser un tramway et son environnement, puis le mettre en mouvement dans Unity.">
   <!-- Toutes les pages partagent la même feuille de style. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -44,8 +45,17 @@
         <div><dt>Modélisation et textures</dt><dd>3ds Max · Réalisation personnelle</dd></div>
         <div><dt>Intégration</dt><dd>Unity</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Reconstituer le tramway de Dijon et son environnement en 3D, en respectant les formes et l’identité du véhicule réel.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Réaliser personnellement la modélisation et l’ensemble des textures sous 3ds Max, à partir de références du véritable tramway.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Une scène présentant le véhicule à son arrêt, avec ses rails et les éléments de son environnement. La fiche conserve une vue d’ensemble de cette réalisation.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure tram-image">
-        <a href="../assets/images/tramway-dijon.webp" aria-label="Agrandir le visuel : Le tramway de Dijon">
+        <a data-gallery href="../assets/images/tramway-dijon.webp" aria-label="Agrandir le visuel : Le tramway de Dijon">
           <img src="../assets/images/tramway-dijon.webp" alt="Modèle 3D du tramway de Dijon, de son arrêt et de ses lignes électriques." width="1600" height="519">
         </a>
         <figcaption>Vue de la modélisation, reprise de mon précédent portfolio. <a href="../assets/images/tramway-dijon.webp">Agrandir le visuel ↗</a></figcaption>
@@ -91,6 +101,23 @@
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="beg-ar-loued.html">
+              <div class="project-image"><img src="../assets/images/beg-ar-loued.webp" alt="" loading="lazy" width="954" height="631"></div>
+              <div class="card-copy"><p class="eyebrow">Patrimoine · Environnement 3D · VR</p><h3>Beg ar Loued</h3><p>Passer de la modélisation d’un objet à la composition d’un paysage.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="numerisation-3d.html">
+              <div class="project-image"><img src="../assets/images/numerisation-3d.webp" alt="" loading="lazy" width="294" height="591"></div>
+              <div class="card-copy"><p class="eyebrow">Exploration · Capture &amp; photogrammétrie</p><h3>Se numériser en 3D</h3><p>Explorer une autre méthode de production 3D : la capture au smartphone.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return">
         <a class="button" href="../creations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a>
       </div>

@@ -6,8 +6,9 @@
   <title>Mon portfolio web — Arnaud Carbonnel</title>
   <meta name="description" content="Apprendre à construire un site en code pour partager mes créations et raconter mes projets.">
   <!-- Toutes les pages partagent la même feuille de style. -->
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script src="../galerie.js?v=20261119-fiches" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -44,8 +45,17 @@
         <div><dt>Technologies</dt><dd>HTML et CSS</dd></div>
         <div><dt>Statut</dt><dd>En cours de création</dd></div>
       </dl>
+      <!-- Synthèse : trois informations pour comprendre le projet avant le récit détaillé. -->
+      <section class="case-summary" aria-labelledby="titre-synthese">
+        <h2 id="titre-synthese">Le projet en bref.</h2>
+        <dl class="summary-grid">
+          <div><dt><span aria-hidden="true">01 / </span>Le besoin</dt><dd>Présenter mes réalisations et mon parcours dans un site personnel, tout en apprenant à comprendre et modifier son code.</dd></div>
+          <div><dt><span aria-hidden="true">02 / </span>Mon rôle</dt><dd>Définir les rubriques, sélectionner les projets, préciser mes contributions et faire évoluer le site avec l’accompagnement de Codex.</dd></div>
+          <div><dt><span aria-hidden="true">03 / </span>Le résultat</dt><dd>Un portfolio publié sur GitHub Pages : quatre rubriques, dix fiches, des médias et un CV. Les améliorations sont suivies avec Git et GitHub Desktop.</dd></div>
+        </dl>
+      </section>
       <figure class="case-figure web-image">
-        <a href="../assets/images/portfolio-web.webp" aria-label="Agrandir le visuel : Mon portfolio web">
+        <a data-gallery href="../assets/images/portfolio-web.webp" aria-label="Agrandir le visuel : Mon portfolio web">
           <img src="../assets/images/portfolio-web.webp" alt="Capture de la première page d’accueil du portfolio Arnaud Carbonnel." width="629" height="656">
         </a>
         <figcaption>Première version du site, avant son organisation en plusieurs pages. <a href="../assets/images/portfolio-web.webp">Agrandir le visuel ↗</a></figcaption>
@@ -71,7 +81,7 @@
           <section id="realisation" aria-labelledby="titre-realisation">
             <p class="eyebrow">02 / PASSER À LA RÉALISATION</p>
             <h2 id="titre-realisation">La réalisation</h2>
-            <p>Le site utilise des fichiers HTML pour le contenu et une feuille CSS commune pour la présentation. Les liens assurent la navigation entre les pages ; aucun framework n’est nécessaire pour cette version. Les fiches rassemblent des informations courtes, des sections de récit, des images et, lorsque cela apporte quelque chose, des vidéos. Une rubrique Recherche donne également accès à un article scientifique en PDF.</p>
+            <p>Le site utilise des fichiers HTML pour le contenu et une feuille CSS commune pour la présentation. Les liens assurent la navigation entre les pages ; aucun framework n’est nécessaire pour cette version. Les fiches rassemblent des informations courtes, des sections de récit, des images et, lorsque cela apporte quelque chose, des vidéos. Une rubrique Recherche donne également accès à un article scientifique en PDF. De petits scripts JavaScript enrichissent l’aperçu de l’accueil, les apparitions au défilement et les galeries, tandis que les liens et les textes restent accessibles sans eux.</p>
             <p>La présentation s’adapte à la largeur de l’écran : les cartes passent de plusieurs colonnes à une seule sur mobile, le menu peut revenir à la ligne et le contenu des fiches se réorganise. Les images ont été préparées dans un format plus léger, et les vidéos démarrent à la demande. Ces choix permettent de travailler à la fois sur la structure, la lisibilité et l’accès aux contenus.</p>
             
           </section>
@@ -85,12 +95,29 @@
           <section id="bilan" aria-labelledby="titre-bilan">
             <p class="eyebrow">04 / PRENDRE DU RECUL</p>
             <h2 id="titre-bilan">Résultats et suite</h2>
-            <p>La version actuelle rassemble quatre rubriques et neuf fiches, avec une navigation entre les cartes et les projets, des illustrations, des vidéos et un accès à la publication. Elle reste enregistrée localement pendant sa préparation. Les améliorations portent sur la qualité des récits, la sélection des médias et la vérification de la lecture sur différentes tailles d’écran.</p>
-            <p>La suite du projet consiste à relire le code bloc par bloc, compléter les informations encore manquantes et préparer l’hébergement. La mise en ligne permettra de partager une adresse avec des recruteurs et de consulter le site depuis un téléphone. L’apprentissage de Git et la gestion des mises à jour font également partie des prochaines étapes.</p>
+            <p>Le portfolio est publié sur GitHub Pages et rassemble quatre rubriques et dix fiches. Il associe des synthèses de projets, des récits détaillés, des galeries d’images, des vidéos et un accès à la publication scientifique. La page À propos présente mon parcours, les compétences illustrées par les projets et une version publique de mon CV.</p>
+            <p>Je poursuis l’apprentissage en relisant le code bloc par bloc et en faisant évoluer le contenu. Git et GitHub Desktop permettent de conserver les changements puis de les publier. Les prochaines explorations portent notamment sur la présentation de modèles 3D dans le navigateur, avec une attention à leur poids et à leur utilisation sur téléphone.</p>
             
           </section>
         </div>
       </div>
+      <section class="related-projects" aria-labelledby="titre-suite">
+        <div class="related-heading"><p class="eyebrow">POUR POURSUIVRE</p><h2 id="titre-suite">D’autres projets à découvrir.</h2></div>
+        <div class="related-grid">
+          <article class="project-card">
+            <a class="project-link" href="verallia.html">
+              <div class="project-image"><img src="../assets/images/verallia.webp" alt="" loading="lazy" width="1600" height="1067"></div>
+              <div class="card-copy"><p class="eyebrow">Vidéo 360° · Unity · Gestion de projet</p><h3>Verallia — visite immersive</h3><p>Retrouver la démarche qui relie besoin, organisation et réalisation.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+          <article class="project-card">
+            <a class="project-link" href="numerisation-3d.html">
+              <div class="project-image"><img src="../assets/images/numerisation-3d.webp" alt="" loading="lazy" width="294" height="591"></div>
+              <div class="card-copy"><p class="eyebrow">Exploration · Capture &amp; photogrammétrie</p><h3>Se numériser en 3D</h3><p>Découvrir une autre exploration centrée sur l’apprentissage par les essais.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
+            </a>
+          </article>
+        </div>
+      </section>
       <div class="case-return">
         <a class="button" href="../explorations.html"><span aria-hidden="true">←</span> Retour à la rubrique</a>
       </div>
