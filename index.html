@@ -27,27 +27,37 @@
     </nav>
   </header>
   <main id="contenu">
+    <!-- BLOC 1 : le « hero » présente mon univers dès l’arrivée sur le site. -->
     <section class="hero section-width" aria-labelledby="titre-principal">
-      <p class="eyebrow"><span class="point" aria-hidden="true"></span> PORTFOLIO / ARNAUD CARBONNEL</p>
-      <h1 id="titre-principal">Des idées.<br>Des projets.<br><span>Du concret.</span></h1>
-      <div class="hero-bottom">
-        <p>Création numérique & gestion de projet.<br>Un espace pour partager mes réalisations,<br class="desktop-break"> mes expérimentations et ce que j’apprends.</p>
-        <!-- Un nom de fichier ouvre une autre page ; #rubriques reste dans cette page. -->
-        <a class="button" href="#rubriques">Explorer le portfolio <span aria-hidden="true">↘</span></a>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="point" aria-hidden="true"></span> PORTFOLIO / ARNAUD CARBONNEL</p>
+        <h1 id="titre-principal">Des idées.<br>Des projets.<br><span>Du concret.</span></h1>
+        <p class="hero-description">De la création numérique à la gestion de projet, je donne forme aux idées et aux expériences.</p>
+        <div class="hero-actions">
+          <!-- #selection rejoint une section de cette page ; le nom de fichier ouvre une autre page. -->
+          <a class="button" href="#selection">Découvrir mes projets <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="a-propos.html">Mon parcours <span aria-hidden="true">↗</span></a>
+        </div>
       </div>
-      <div class="hero-index" aria-hidden="true">3D / INTERACTION / PROJETS</div>
-    </section>
-    <section class="section-width section-block" id="rubriques" aria-labelledby="titre-rubriques">
-      <div class="section-heading"><div><p class="eyebrow">01 / MES RUBRIQUES</p><h2 id="titre-rubriques">Plusieurs façons de créer.</h2></div></div>
-      <div class="rubric-list">
-        <a href="creations.html"><span class="rubric-number">01</span><div><h3>Créations numériques</h3><p>3D, réalité augmentée et expériences interactives.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
-        <a href="gestion-projet.html"><span class="rubric-number">02</span><div><h3>Gestion de projet</h3><p>Le contexte, le travail d’équipe et le parcours des réalisations.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
-        <a href="recherche.html"><span class="rubric-number">03</span><div><h3>Recherche &amp; publications</h3><p>Études scientifiques, expérimentation et articles collectifs.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
-        <a href="explorations.html"><span class="rubric-number">04</span><div><h3>Explorations</h3><p>Tester. Apprendre. Créer. Mes projets personnels.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+      <!-- Un vrai visuel de projet : toute la composition mène à sa fiche. -->
+      <div class="hero-visual">
+        <a class="hero-project" href="projets/beg-ar-loued.html" aria-labelledby="apercu-projet">
+          <img src="assets/images/beg-ar-loued.webp" alt="Le paysage côtier de Beg ar Loued reconstitué dans Unity." width="954" height="631" fetchpriority="high">
+          <div class="hero-project-caption">
+            <div><p class="eyebrow">PATRIMOINE / ENVIRONNEMENT 3D</p><p id="apercu-projet">Beg ar Loued</p></div>
+            <span class="round-arrow" aria-hidden="true">↗</span>
+          </div>
+        </a>
+        <p class="hero-caption">Un aperçu de mon univers. <span aria-hidden="true">↗</span></p>
+      </div>
+      <div class="hero-footer">
+        <p>MODÉLISER · EXPÉRIMENTER · COORDONNER</p>
+        <a href="#selection">Faire défiler <span aria-hidden="true">↓</span></a>
       </div>
     </section>
-    <section class="section-width section-block" aria-labelledby="titre-selection">
-      <div class="section-heading"><div><p class="eyebrow">02 / QUELQUES RÉALISATIONS</p><h2 id="titre-selection">Trois projets à découvrir.</h2></div><a class="text-link" href="#rubriques">Voir les quatre rubriques ↗</a></div>
+    <!-- BLOC 2 : les réalisations arrivent avant les rubriques pour montrer le travail plus vite. -->
+    <section class="section-width section-block" id="selection" aria-labelledby="titre-selection">
+      <div class="section-heading"><div><p class="eyebrow">01 / QUELQUES RÉALISATIONS</p><h2 id="titre-selection">De l’idée à l’expérience.</h2></div><a class="text-link" href="#rubriques">Voir les quatre rubriques <span aria-hidden="true">↗</span></a></div>
       <div class="project-grid">
       <article class="project-card">
         <a class="project-link" href="projets/walking-in-place.html" aria-labelledby="carte-walking-in-place">
@@ -90,11 +100,21 @@
       </article>
       </div>
     </section>
+    <!-- BLOC 3 : chaque ligne reste un lien vers une page de rubrique. -->
+    <section class="section-width section-block rubrics-layout" id="rubriques" aria-labelledby="titre-rubriques">
+      <div class="rubrics-intro"><p class="eyebrow">02 / MES RUBRIQUES</p><h2 id="titre-rubriques">Plusieurs façons<br>de créer.</h2><p>Concevoir une expérience, porter un projet, explorer une question : découvre les différentes facettes de mon travail.</p><a class="text-link" href="a-propos.html">En savoir plus sur mon parcours <span aria-hidden="true">↗</span></a></div>
+      <div class="rubric-list">
+        <a href="creations.html"><span class="rubric-number">01</span><div><h3>Créations numériques</h3><p>3D, réalité augmentée et expériences interactives.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="gestion-projet.html"><span class="rubric-number">02</span><div><h3>Gestion de projet</h3><p>Le contexte, le travail d’équipe et le parcours des réalisations.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="recherche.html"><span class="rubric-number">03</span><div><h3>Recherche &amp; publications</h3><p>Études scientifiques, expérimentation et articles collectifs.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+        <a href="explorations.html"><span class="rubric-number">04</span><div><h3>Explorations</h3><p>Tester. Apprendre. Créer. Mes projets personnels.</p></div><span class="rubric-arrow" aria-hidden="true">↗</span></a>
+      </div>
+    </section>
     <section class="section-width section-block research-feature exploration-feature" aria-labelledby="titre-explorations">
       <div><p class="eyebrow">03 / EXPLORATIONS</p><h2 id="titre-explorations">Apprendre en faisant.</h2><p>De la numérisation 3D à la création de ce portfolio, mes explorations donnent une place aux essais, aux difficultés et aux apprentissages.</p><a class="text-link" href="explorations.html">Parcourir les explorations ↗</a></div>
       <a href="projets/numerisation-3d.html" aria-label="Découvrir l’exploration de numérisation 3D"><img src="assets/images/numerisation-3d.webp" alt="Un des essais de numérisation 3D de ma personne." width="294" height="591" loading="lazy"></a>
     </section>
-    <section class="contact-band" aria-labelledby="titre-contact"><div class="section-width"><p class="eyebrow">ET LA SUITE ?</p><h2 id="titre-contact">Et si on échangeait ?</h2><p>Une opportunité, un projet ou simplement une question.</p><a class="text-link" href="contact.html">Prendre contact ↗</a></div></section>
+    <section class="contact-band" aria-labelledby="titre-contact"><div class="section-width contact-inner"><div><p class="eyebrow">ET LA SUITE ?</p><h2 id="titre-contact">Et si on<br>échangeait ?</h2><p>Une opportunité, un projet ou simplement une question.</p></div><a class="button contact-button" href="contact.html">Parlons de votre projet <span aria-hidden="true">↗</span></a></div></section>
   </main>
   <footer class="section-width site-footer">
     <p>© 2026 Arnaud Carbonnel</p>
