@@ -59,6 +59,12 @@
 
   links.forEach((link, index) => {
     link.classList.add('gallery-trigger');
+    // Un repère discret ; le lien entier garde son nom accessible et reste cliquable.
+    const cue = document.createElement('span');
+    cue.className = 'gallery-cue';
+    cue.setAttribute('aria-hidden', 'true');
+    cue.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M9 4H4v5M15 4h5v5M4 15v5h5M20 15v5h-5"/></svg>';
+    link.append(cue);
     const captionLinks = [...link.closest('figure').querySelectorAll('figcaption a')].filter((a) => a.href === link.href);
     [link, ...captionLinks].forEach((trigger) => {
       trigger.setAttribute('aria-haspopup', 'dialog');

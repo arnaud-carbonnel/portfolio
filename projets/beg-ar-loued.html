@@ -6,9 +6,10 @@
   <title>Beg ar Loued — Arnaud Carbonnel</title>
   <meta name="description" content="Reconstituer un paysage côtier ancien et le rendre explorable en réalité virtuelle.">
   <!-- Une seule feuille de style est partagée par toutes les pages. -->
-  <link rel="stylesheet" href="../style.css?v=20261119-fiches">
+  <link rel="stylesheet" href="../style.css?v=20261120-galerie-3d">
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
-  <script src="../galerie.js?v=20261119-fiches" defer></script>
+  <script src="../galerie.js?v=20261120-galerie-3d" defer></script>
+  <script src="../modele-3d.js?v=20261120-galerie-3d" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenu">Aller au contenu</a>
@@ -55,10 +56,30 @@
         </a>
         <figcaption>Reconstitution de l’environnement de Beg ar Loued : végétation, maison et littoral.</figcaption>
       </figure>
+      <!-- La maquette reste un simple aperçu tant que le visiteur ne lance pas la 3D. -->
+      <section id="maison-3d" class="model-section" aria-labelledby="titre-maison-3d">
+        <div class="model-heading"><p class="eyebrow">EXPLORATION 3D / LA MAISON</p><h2 id="titre-maison-3d">Une maquette à manipuler.</h2><p>Observer la toiture, les murs et les volumes sous un autre angle. Cette version préparée pour l’impression 3D est présentée sans textures, avec un matériau uniforme qui met en valeur sa géométrie.</p></div>
+        <div class="model-card" data-model-card data-model-src="../assets/models/maison-beg-ar-loued.glb">
+          <div class="model-stage">
+            <div class="model-placeholder">
+              <img src="../assets/images/maison-beg-ar-loued-apercu.webp" alt="Aperçu de la maquette sans textures de Beg ar Loued, avec ses murs, sa toiture et quelques éléments disposés à part." width="1200" height="900" loading="lazy">
+              <div class="model-launch"><button class="button" type="button" data-model-start hidden>Explorer la maison en 3D</button><p>Chargement au clic · Maquette : 0,63 Mo</p></div>
+            </div>
+          </div>
+          <div class="model-toolbar" hidden>
+            <div class="model-views" role="group" aria-label="Choisir un point de vue"><button type="button" data-model-reset>Vue d’ensemble</button><button type="button" data-model-top>Vue du dessus</button></div>
+            <div class="model-zoom" role="group" aria-label="Régler le zoom"><button type="button" data-model-zoom="out" aria-label="Éloigner la vue">−</button><span>Zoom</span><button type="button" data-model-zoom="in" aria-label="Rapprocher la vue">+</button></div>
+          </div>
+          <div class="model-information"><p data-model-status role="status" aria-live="polite">La maquette se charge uniquement à votre demande.</p><p class="model-help" id="aide-maison-3d" hidden>Faites glisser pour tourner. Utilisez la molette, le pincement ou les boutons pour zoomer. Au clavier, les flèches orientent la vue lorsque la maquette a le focus.</p><noscript><p>Activez JavaScript pour manipuler la maquette. Les images et les vidéos de cette fiche restent consultables.</p></noscript></div>
+        </div>
+        <p class="model-credit"><strong>Crédits :</strong> modèle de maison préexistant fourni par le CERV de Brest. L’infographie 3D est créditée à Virtualys dans le rapport de stage. Cette copie pour le web conserve les éléments séparés de la version destinée à l’impression ; le matériau de présentation ne restitue pas les textures d’origine.</p>
+        <p class="model-credit">Mon travail de stage porte sur la reconstitution de l’environnement et les interactions de la visite VR, présentées dans la suite de cette fiche.</p>
+      </section>
       <div class="case-layout">
         <aside class="case-outline">
           <p class="eyebrow">DANS CE PROJET</p>
           <nav aria-label="Sommaire du projet">
+            <a href="#maison-3d">Explorer la maison en 3D</a>
             <a href="#contexte">01 — Replacer la maison dans son paysage</a>
             <a href="#realisation">02 — Des références de terrain à Unity</a>
             <a href="#contribution">03 — Environnement et médiation</a>
@@ -140,7 +161,7 @@
         <div class="related-grid">
           <article class="project-card">
             <a class="project-link" href="stage-lirmm.html">
-              <div class="project-image"><img loading="lazy" src="../assets/images/lirmm-hub.webp" alt="" width="1600" height="815" fetchpriority="high"></div>
+              <div class="project-image"><img loading="lazy" src="../assets/images/lirmm-hub.webp" alt="" width="1600" height="815"></div>
               <div class="card-copy"><p class="eyebrow">LIRMM · ÉQUIPE ADVANSE · STAGE DE FIN D’ÉTUDES</p><h3>Concevoir une expérience VR accompagnée par l’IA.</h3><p>Prolonger la découverte des parcours immersifs et de leurs interactions.</p><div class="card-action">Découvrir le projet <span aria-hidden="true">↗</span></div></div>
             </a>
           </article>

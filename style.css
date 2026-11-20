@@ -196,6 +196,35 @@ main > .section-width:last-child { padding-bottom: 64px; }
 .exploration-feature > a { display: grid; place-items: center; padding: 24px; background: #eeece6; }
 .exploration-feature img { max-height: 340px; object-fit: contain; }
 
+/* Maquette 3D : un aperçu léger, puis un lecteur chargé à la demande. */
+.model-section { margin-top: 54px; padding-top: 44px; border-top: 1px solid var(--ligne); }
+.model-heading { max-width: 75ch; margin-bottom: 28px; }
+.model-heading .eyebrow { margin-bottom: 18px; color: var(--accent); }
+.model-heading > p:not(.eyebrow) { margin-top: 22px; color: var(--secondaire); font-size: 16px; }
+.model-card { border: 1px solid var(--ligne); background: var(--papier); }
+.model-card [hidden] { display: none !important; }
+.model-stage { position: relative; width: 100%; aspect-ratio: 16 / 10; max-height: 520px; background: #e3e4df; }
+.model-stage model-viewer, .model-placeholder { position: absolute; inset: 0; width: 100%; height: 100%; }
+.model-stage model-viewer { --progress-bar-color: var(--accent); --progress-bar-height: 3px; }
+.model-placeholder { display: grid; }
+.model-placeholder > img { width: 100%; height: 100%; object-fit: cover; min-height: 0; }
+.model-launch { position: absolute; inset: auto 16px 24px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.model-launch p { padding: 4px 10px; background: var(--papier); color: var(--secondaire); font-size: 13px; }
+.model-card button { cursor: pointer; font-family: inherit; }
+.model-launch button { border: 0; font-size: 16px; min-height: 48px; }
+.model-launch button:disabled { cursor: progress; background: var(--secondaire); }
+.model-card button:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+.model-toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 24px; border-top: 1px solid var(--ligne); }
+.model-views, .model-zoom { display: flex; align-items: center; gap: 10px; }
+.model-toolbar button { border: 1px solid var(--ligne); background: var(--papier); color: var(--texte); padding: 10px 14px; min-height: 44px; font-size: 14px; }
+.model-toolbar button:hover { border-color: var(--accent); color: var(--accent); }
+.model-zoom button { width: 44px; font-size: 20px; line-height: 1; }
+.model-zoom span { font-size: 14px; color: var(--secondaire); }
+.model-information { padding: 18px 24px; border-top: 1px solid var(--ligne); font-size: 14px; color: var(--secondaire); }
+.model-information [role="status"] { color: var(--accent); }
+.model-help { margin-top: 8px; }
+.model-credit { max-width: 100ch; font-size: 14px; color: var(--secondaire); margin-top: 18px; }
+
 /* 7. À PROPOS, CONTACT ET PIED DE PAGE. */
 /* Lecture rapide et poursuite de la visite : même structure dans les dix fiches. */
 .case-summary { padding: 30px; margin-block: 0 32px; background: var(--papier); border: 1px solid var(--ligne); }
@@ -215,8 +244,8 @@ main > .section-width:last-child { padding-bottom: 64px; }
 
 /* La fenêtre native dialog bloque le fond et conserve la navigation au clavier. */
 .gallery-trigger { position: relative; cursor: zoom-in; }
-.gallery-trigger::after { content: "Agrandir l’image"; position: absolute; right: 10px; bottom: 10px; padding: 6px 10px; background: var(--papier); color: var(--accent); font-size: 13px; border: 1px solid var(--ligne); }
-.gallery-trigger:hover::after, .gallery-trigger:focus-visible::after { background: var(--accent); color: white; }
+.gallery-cue { position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid var(--ligne); border-radius: 50%; background: var(--papier); color: var(--secondaire); pointer-events: none; transition: color .2s, border-color .2s; }
+.gallery-trigger:hover .gallery-cue, .gallery-trigger:focus-visible .gallery-cue { color: var(--accent); border-color: var(--accent); }
 html.gallery-open, .gallery-open body { overflow: hidden; }
 .image-gallery { width: 100%; height: 100vh; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; color: var(--texte); background: var(--fond); }
 .image-gallery::backdrop { background: #222521; }
@@ -353,6 +382,13 @@ html.gallery-open, .gallery-open body { overflow: hidden; }
   .case-layout { grid-template-columns: 200px minmax(0, 1fr); gap: 30px; }
 }
 @media (max-width: 760px) {
+  .model-section { margin-top: 36px; padding-top: 30px; }
+  .model-stage { aspect-ratio: 1; min-height: 300px; }
+  .model-launch { inset: auto 12px 16px; }
+  .model-launch button { font-size: 14px; padding-inline: 16px; }
+  .model-launch p { font-size: 12px; }
+  .model-toolbar, .model-information { padding: 16px; }
+  .model-views { flex-wrap: wrap; }
   .summary-grid, .related-grid, .about-intro, .about-section, .about-skills { grid-template-columns: minmax(0, 1fr); }
   .case-summary { padding: 22px; }
   .summary-grid { gap: 22px; }

@@ -10,6 +10,8 @@
 !/interactions.js
 # Galerie locale : agrandissement des images des fiches.
 !/galerie.js
+# Lecteur 3D local et unique copie web examinée ; les sources Blender restent privées.
+!/modele-3d.js
 !/projets/
 !/projets/*.html
 !/assets/
@@ -21,3 +23,13 @@
 !/assets/documents/
 !/assets/documents/article-cobot.pdf
 !/assets/documents/cv-arnaud-carbonnel.pdf
+!/assets/models/
+!/assets/models/maison-beg-ar-loued.glb
+!/assets/vendor/
+!/assets/vendor/model-viewer-4.4.0.min.js
+!/assets/vendor/model-viewer-LICENSE.txt
+!/assets/vendor/draco-1.5.6/
+!/assets/vendor/draco-1.5.6/draco_decoder.js
+!/assets/vendor/draco-1.5.6/draco_wasm_wrapper.js
+!/assets/vendor/draco-1.5.6/draco_decoder.wasm
+!/assets/vendor/draco-1.5.6/LICENSE.txt
